@@ -1,12 +1,25 @@
-<div class="login-container">
-    <div class="login-content">
-        <mat-form-field>
-            <mat-label>Nickname</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Password</mat-label>
-            <input matInput type="password">
-        </mat-form-field>
-    </div>
-</div>
+<mat-card class="card">
+  <mat-card-header class="title">Login</mat-card-header>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
+    <mat-form-field class="field">
+      <mat-label>Nickname</mat-label>
+      <input matInput type="text" formControlName="nickname" [class.invalid]="loginForm.get('nickname')?.invalid && (loginForm.get('nickname')?.dirty || loginForm.get('nickname')?.touched) "/>
+      @if (loginForm.get('nickname')?.hasError('required')&& (loginForm.get('nickname')?.dirty || loginForm.get('nickname')?.touched)) {
+      <mat-error>Nickname is required</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field class="field">
+      <mat-label class="row">Password</mat-label>
+      <input matInput type="password" formControlName="password" [class.invalid]="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)"/>
+      @if(loginForm.get('password')?.hasError('required') && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)){
+        <mat-error>Password is required</mat-error>
+      }
+    </mat-form-field>
+    <button mat-raised-button type="submit" class="submit-button">Submit</button>
+  </form>
+</mat-card>
+<div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+ </div>
