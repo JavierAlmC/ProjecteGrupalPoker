@@ -3,23 +3,62 @@
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
     <mat-form-field class="field">
       <mat-label>Nickname</mat-label>
-      <input matInput type="text" formControlName="nickname" [class.invalid]="loginForm.get('nickname')?.invalid && (loginForm.get('nickname')?.dirty || loginForm.get('nickname')?.touched) "/>
-      @if (loginForm.get('nickname')?.hasError('required')&& (loginForm.get('nickname')?.dirty || loginForm.get('nickname')?.touched)) {
+      <input
+        matInput
+        type="text"
+        formControlName="nickname"
+        [class.invalid]="
+          loginForm.get('nickname')?.invalid &&
+          (loginForm.get('nickname')?.dirty ||
+            loginForm.get('nickname')?.touched ||
+            isSubmitted)
+        "
+      />
+      @if (loginForm.get('nickname')?.hasError('required')&&
+      (loginForm.get('nickname')?.dirty || loginForm.get('nickname')?.touched ||
+      isSubmitted)) {
       <mat-error>Nickname is required</mat-error>
+      } @if (loginForm.get('nickname')?.hasError('minlength')&&
+      (loginForm.get('nickname')?.dirty || loginForm.get('nickname')?.touched ||
+      isSubmitted)) {
+      <mat-error>Nickname length must be at least 3 characters</mat-error>
       }
     </mat-form-field>
     <mat-form-field class="field">
       <mat-label class="row">Password</mat-label>
-      <input matInput type="password" formControlName="password" [class.invalid]="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)"/>
-      @if(loginForm.get('password')?.hasError('required') && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)){
-        <mat-error>Password is required</mat-error>
+      <input
+        matInput
+        type="password"
+        formControlName="password"
+        [class.invalid]="
+          loginForm.get('password')?.invalid &&
+          (loginForm.get('password')?.dirty ||
+            loginForm.get('password')?.touched ||
+            isSubmitted)
+        "
+        [type]="hide ? 'password' : 'text'"
+      />
+      <mat-icon matSuffix (click)="hide = !hide">{{
+        hide ? "visibility_off" : "visibility"
+      }}</mat-icon>
+      @if(loginForm.get('password')?.hasError('required') &&
+      (loginForm.get('password')?.dirty || loginForm.get('password')?.touched ||
+      isSubmitted)) {
+      <mat-error>Password is required</mat-error>
+      } @if (loginForm.get('password')?.hasError('minlength')&&
+      (loginForm.get('password')?.dirty || loginForm.get('password')?.touched ||
+      isSubmitted)) {
+      <mat-error>Password length must be at least 4 characters</mat-error>
       }
     </mat-form-field>
-    <button mat-raised-button type="submit" class="submit-button">Submit</button>
+    <button mat-raised-button color="primary" type="submit" class="submit-button">
+      Submit
+    </button>
+    <button mat-raised-button color="link" color="accent" (click)="signUp()">Don't have an account yet? Sign up</button>
   </form>
 </mat-card>
 <div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
- </div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+</div>

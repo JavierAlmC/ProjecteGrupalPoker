@@ -2,7 +2,6 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
-  FormGroup,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
@@ -12,6 +11,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { MatDialogComponent } from '../mat-dialog/mat-dialog.component';
+import { MatIconModule } from '@angular/material/icon';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -22,12 +23,16 @@ import { MatDialogComponent } from '../mat-dialog/mat-dialog.component';
     MatCardModule,
     ReactiveFormsModule,
     MatButtonModule,
+    MatIconModule,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
   encapsulation: ViewEncapsulation.None,
 })
 export class LoginComponent implements OnInit {
+  isSubmitted = false;
+  hide = true;
+
   loginForm = this.fb.group({
     nickname: new FormControl('', [
       Validators.required,
@@ -39,22 +44,33 @@ export class LoginComponent implements OnInit {
     ]),
   });
 
-  constructor(private fb: FormBuilder, private matDialog: MatDialog) {}
+  constructor(private fb: FormBuilder, private matDialog: MatDialog, private router: Router) {}
   ngOnInit(): void {
-    const dialogRef = this.matDialog.open(MatDialogComponent, {
-        disableClose: true,
-        height: '500px',
-        width: '500px',
-        data: {
+    this.matDialog.open(MatDialogComponent, {
+      height: 'min-content',
+      width: 'max-content',
+      data: {
         title: 'Confirm Your Age',
         content:
-          'Welcome to our poker website! By logging in, you affirm that you are over 18 years old.',
+          'Welcome to our poker website! By confirming, you affirm that you are over 18 years old.',
       },
     });
-    dialogRef.afterClosed().subscribe(result => {
-    });
-    
   }
 
-  onSubmit(): void {}
+  onSubmit(): void {
+    this.isSubmitted = true;
+
+    if (this.loginForm.invalid) {
+      return;
+    } else {
+      //aaci haurem de cridar a userservice, i veure si existeix
+      console.log('correcte');
+    }
+  }
+  signUp(): void {
+
+    this.router.navigate(['register']);
+
+
+  }
 }
