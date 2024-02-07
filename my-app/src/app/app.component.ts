@@ -7,12 +7,22 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,HeaderComponent,MainComponent,FooterComponent,HttpClientModule],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    HeaderComponent,
+    MainComponent,
+    FooterComponent,
+    HttpClientModule,
+
+
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'my-app';
