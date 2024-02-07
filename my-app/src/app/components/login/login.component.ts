@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
   loginForm = this.fb.group({
     nickname: new FormControl('', [
       Validators.required,
-      Validators.minLength(3),
+      Validators.minLength(4),
     ]),
     password: new FormControl('', [
       Validators.required,
@@ -70,6 +70,10 @@ export class LoginComponent implements OnInit {
     this.isSubmitted = true;
     //si ja està loggejat, pero te demencia i no sen recorda, el redirigim...
     if (this.userServices.isLoggedIn()) {
+      this.toastr.warning('User already logged in', 'Warning', {
+        easing: 'ease-out',
+        timeOut: 2000,
+      });
       this.router.navigate(['rooms']);
       return;
     }
@@ -111,4 +115,5 @@ export class LoginComponent implements OnInit {
   signUp(): void {
     this.router.navigate(['register']);
   }
+  
 }

@@ -21,9 +21,10 @@
       } @if (loginForm.get('nickname')?.hasError('minlength')&&
       (loginForm.get('nickname')?.dirty || loginForm.get('nickname')?.touched ||
       isSubmitted)) {
-      <mat-error>Nickname length must be at least 3 characters</mat-error>
+      <mat-error>Nickname length must be at least 4 characters</mat-error>
       }
     </mat-form-field>
+
     <mat-form-field class="field">
       <mat-label class="row">Password</mat-label>
       <input
