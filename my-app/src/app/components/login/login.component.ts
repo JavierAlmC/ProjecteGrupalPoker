@@ -13,6 +13,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatDialogComponent } from '../mat-dialog/mat-dialog.component';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
+import { UserServicesService } from '../../services/user-services.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +25,7 @@ import { Router } from '@angular/router';
     MatCardModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatIconModule,
+    MatIconModule
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
@@ -44,7 +46,7 @@ export class LoginComponent implements OnInit {
     ]),
   });
 
-  constructor(private fb: FormBuilder, private matDialog: MatDialog, private router: Router) {}
+  constructor(private fb: FormBuilder, private matDialog: MatDialog, private router: Router, public userServices: UserServicesService) {}
   ngOnInit(): void {
     this.matDialog.open(MatDialogComponent, {
       height: 'min-content',
@@ -59,12 +61,22 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     this.isSubmitted = true;
-
+  
     if (this.loginForm.invalid) {
       return;
+    } 
+  
+    const nickname = this.loginForm.value.nickname;
+    const password = this.loginForm.value.password;
+  
+    if (nickname && password) {
+      const user = { nickname: nickname, password: password };
+      this.userServices.loginUser(user.nickname, user.password).subscribe((data) => {
+        console.log(data);
+        
+      });
     } else {
-      //aaci haurem de cridar a userservice, i veure si existeix
-      console.log('correcte');
+      console.error("Nickname o contraseña no válidos");
     }
   }
   signUp(): void {
