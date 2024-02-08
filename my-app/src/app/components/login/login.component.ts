@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Inject, OnInit, ViewEncapsulation } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { UserServicesService } from '../../services/user-services.service';
 import { HttpClient } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -25,7 +26,7 @@ import { HttpClient } from '@angular/common/http';
     MatCardModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
@@ -38,7 +39,7 @@ export class LoginComponent implements OnInit {
   loginForm = this.fb.group({
     nickname: new FormControl('', [
       Validators.required,
-      Validators.minLength(3),
+      Validators.minLength(4),
     ]),
     password: new FormControl('', [
       Validators.required,
@@ -46,7 +47,13 @@ export class LoginComponent implements OnInit {
     ]),
   });
 
-  constructor(private fb: FormBuilder, private matDialog: MatDialog, private router: Router, public userServices: UserServicesService) {}
+  constructor(
+    private fb: FormBuilder,
+    private matDialog: MatDialog,
+    private router: Router,
+    public userServices: UserServicesService,
+    @Inject(ToastrService) private toastr: ToastrService
+  ) {}
   ngOnInit(): void {
     this.matDialog.open(MatDialogComponent, {
       height: 'min-content',
@@ -61,28 +68,52 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     this.isSubmitted = true;
-  
-    if (this.loginForm.invalid) {
+    //si ja està loggejat, pero te demencia i no sen recorda, el redirigim...
+    if (this.userServices.isLoggedIn()) {
+      this.toastr.warning('User already logged in', 'Warning', {
+        easing: 'ease-out',
+        timeOut: 2000,
+      });
+      this.router.navigate(['rooms']);
       return;
-    } 
-  
+    }
+
+    if (this.loginForm.invalid) {
+      this.toastr.warning('Please fill in all fields correctly', 'Warning', {
+        easing: 'ease-out',
+        timeOut: 2000,
+      });
+      return;
+    }
     const nickname = this.loginForm.value.nickname;
     const password = this.loginForm.value.password;
-  
+
     if (nickname && password) {
       const user = { nickname: nickname, password: password };
-      this.userServices.loginUser(user.nickname, user.password).subscribe((data) => {
-        console.log(data);
-        
+      this.userServices.loginUser(user.nickname, user.password).subscribe({
+        next: (response) => {
+          console.log(response)
+          this.toastr.success('Login successful', 'Success', {
+            easing: 'ease-out',
+            timeOut: 2000,
+          });
+          this.userServices.setToken(response.token);
+          console.log(this.userServices.getToken());
+          this.userServices.setNickname(response.nickname);
+          console.log(this.userServices.getNickname());
+          this.router.navigate(['rooms']);
+        },
+        error: (error) => {
+          this.toastr.error('Login failed', 'Error', {
+            easing: 'ease-out',
+            timeOut: 2000,
+          });
+        },
       });
-    } else {
-      console.error("Nickname o contraseña no válidos");
     }
   }
   signUp(): void {
-
     this.router.navigate(['register']);
-
-
   }
+  
 }

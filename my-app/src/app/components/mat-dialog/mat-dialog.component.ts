@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, ViewEncapsulation } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatCard } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,6 +13,7 @@ import { MatDialogActions } from '@angular/material/dialog';
   imports: [MatCard,MatButtonModule,MatDialogTitle,MatDialogContent,MatDialogActions],
   templateUrl: './mat-dialog.component.html',
   styleUrl: './mat-dialog.component.css',
+  encapsulation: ViewEncapsulation.None,
 })
 export class MatDialogComponent implements OnInit {
 
