@@ -7,8 +7,6 @@ import { ViewRoomsComponent } from './components/view-rooms/view-rooms.component
 export const routes: Routes = [
     {path:'', component:LoginComponent},
     {path:'register', component:RegistrationComponent},
-    {path:'prueba', component:ViewRoomsComponent}
+    {path:'prueba', component:ViewRoomsComponent},
     {path:'rooms', component:RoomsComponent}
-
-
 ];
