@@ -9,6 +9,4 @@ export const routes: Routes = [
     {path:'register', component:RegistrationComponent},
     {path:'prueba', component:ViewRoomsComponent},
     {path:'rooms', component:RoomsComponent}
-
-
 ];
