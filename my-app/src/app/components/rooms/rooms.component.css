@@ -1,0 +1,19 @@
+.container2{
+    padding: 0%;
+    margin: 0% auto;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+    width: 100% !important;
+    padding: 1rem;  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+  }
+  @media only screen and (max-width: 767px) {
+    .container2 {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+}
