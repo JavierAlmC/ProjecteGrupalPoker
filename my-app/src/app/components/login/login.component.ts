@@ -14,7 +14,6 @@ import { MatDialogComponent } from '../mat-dialog/mat-dialog.component';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { UserServicesService } from '../../services/user-services.service';
-import { HttpClient } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
