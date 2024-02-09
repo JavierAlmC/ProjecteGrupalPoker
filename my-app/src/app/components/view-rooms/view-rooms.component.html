@@ -1,68 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-  <div class="container">
-    <div class="games">
-      <table class="styled-table">
-        <thead>
-            <tr>
-                <th>ID</th>
-
-                <th>jugadores</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-
-                <td>0/4</td>
-                <td class="body_button"><button class="btn btn-hover">
-                  <span class="btn-text">Unete</span>
-                </button></td>
-            </tr>
-            <tr class="active-row">
-                <td>2</td>
-
-                <td>0/4</td>
-                <td class="body_button"><button class="btn btn-hover">
-                  <span class="btn-text">Unete</span>
-                </button></td>
-            </tr>
-            <tr class="active-row">
-              <td>2</td>
-
-              <td>0/4</td>
-              <td class="body_button"><button class="btn btn-hover">
-                <span class="btn-text">Unete</span>
-              </button></td>
-          </tr>
-          <tr class="active-row">
-            <td>2</td>
-  
-            <td>0/4</td>
-            <td class="body_button"><button class="btn btn-hover">
-              <span class="btn-text">Unete</span>
-            </button></td>
+<app-header></app-header>
+<div class="container">
+  <div class="active_games"></div>
+  <div class="games">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+          <th scope="col">Unirse</th>
         </tr>
-        <tr class="active-row">
-                <td>2</td>
-
-                <td>0/4</td>
-                <td class="body_button"><button class="btn btn-hover">
-                  <span class="btn-text">Unete</span>
-                </button></td>
-            </tr>
-        </tbody>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>mdo</td>
+          <td>test</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>fat</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>twitter</td>
+          
+        </tr>
+      </tbody>
     </table>
-    </div>
-  <div class="create_game">.</div>
+    
   </div>
+  <div class="create_game"></div>
   
-</body>
-</html>
+</div>
