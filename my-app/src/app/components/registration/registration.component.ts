@@ -32,8 +32,7 @@ import { ToastrService } from 'ngx-toastr';
     MatIconModule,
   ],
   templateUrl: './registration.component.html',
-  styleUrl: './registration.component.css',
-  encapsulation: ViewEncapsulation.None,
+  styleUrl: './registration.component.css'
 })
 export class RegistrationComponent {
   isSubmitted = false;

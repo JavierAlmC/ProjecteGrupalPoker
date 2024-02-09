@@ -30,7 +30,6 @@ import { ToastrService } from 'ngx-toastr';
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
-  encapsulation: ViewEncapsulation.None,
 })
 export class LoginComponent implements OnInit {
   isSubmitted = false;
