@@ -6,9 +6,7 @@ import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RoomsComponent } from './components/rooms/rooms.component';
-import { PlayerGamesComponent } from './components/player-games/player-games.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { BoardComponent } from './components/board/board.component';
+
 
 
 @Component({
@@ -21,7 +19,8 @@ import { BoardComponent } from './components/board/board.component';
     MainComponent,
     FooterComponent,
     HttpClientModule,
-    RoomsComponent
+    RoomsComponent,
+ 
     
     
 
