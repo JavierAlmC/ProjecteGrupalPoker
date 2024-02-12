@@ -12,9 +12,9 @@
                 </div>
                 <div class="desktop_menu" [class.mobile_menu]="menuValue">
                     <ul>
-                        <li (click)="closeMenu"><a href="#">Mesas</a></li>
-                        <li (click)="closeMenu"><a href="#">Perfil</a></li>
-                        <li (click)="closeMenu"><a href="#">Logout</a></li>
+                        <li (click)="closeMenu()"><a (click)="navigateToRooms();" routerLink="/rooms">Mesas</a></li>
+                        <li (click)="closeMenu()"><a (click)="navigateToProfile();"routerLink="/profile">Perfil</a></li>
+                        <li (click)="closeMenu()"><a (click)="logout(); $event.stopPropagation()" routerLink="/login">Logout</a></li>
                     </ul>
                 </div>
             </div>
