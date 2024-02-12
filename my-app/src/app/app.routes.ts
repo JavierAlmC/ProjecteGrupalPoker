@@ -5,8 +5,9 @@ import { RoomsComponent } from './components/rooms/rooms.component';
 import { ViewRoomsComponent } from './components/view-rooms/view-rooms.component';
 
 export const routes: Routes = [
-    {path:'', component:LoginComponent},
+    {path:'login', component:LoginComponent},
     {path:'register', component:RegistrationComponent},
     {path:'prueba', component:ViewRoomsComponent},
-    {path:'rooms', component:RoomsComponent}
+    {path:'rooms', component:RoomsComponent},
+    {path:'**', redirectTo: 'login', pathMatch:'full'},
 ];
