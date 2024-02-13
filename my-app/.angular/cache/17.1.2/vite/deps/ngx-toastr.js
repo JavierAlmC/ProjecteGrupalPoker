@@ -1,18 +1,31 @@
 import {
   DomSanitizer
+<<<<<<< HEAD
 } from "./chunk-67ULLJPC.js";
 import "./chunk-TJX6JMHG.js";
+=======
+} from "./chunk-7VR2K72K.js";
+import "./chunk-UDJGKBKW.js";
+>>>>>>> origin/Josep
 import {
   animate,
   state,
   style,
   transition,
   trigger
+<<<<<<< HEAD
 } from "./chunk-LH4SUDXZ.js";
 import {
   DOCUMENT,
   NgIf
 } from "./chunk-MG2RVQ25.js";
+=======
+} from "./chunk-UREEHHDU.js";
+import {
+  DOCUMENT,
+  NgIf
+} from "./chunk-L72UBDQD.js";
+>>>>>>> origin/Josep
 import {
   ApplicationRef,
   Component,
@@ -60,11 +73,15 @@ import {
   ɵɵtemplate,
   ɵɵtext,
   ɵɵtextInterpolate1
+<<<<<<< HEAD
 } from "./chunk-VT5A4BNA.js";
 import {
   __spreadProps,
   __spreadValues
 } from "./chunk-3EWR26GJ.js";
+=======
+} from "./chunk-YW2W5TUJ.js";
+>>>>>>> origin/Josep
 
 // node_modules/ngx-toastr/fesm2022/ngx-toastr.mjs
 var _c0 = ["toast-component", ""];

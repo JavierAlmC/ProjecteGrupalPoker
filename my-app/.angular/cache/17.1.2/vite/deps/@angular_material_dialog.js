@@ -1,4 +1,17 @@
 import {
+  BasePortalOutlet,
+  CdkPortalOutlet,
+  ComponentPortal,
+  Overlay,
+  OverlayConfig,
+  OverlayContainer,
+  OverlayModule,
+  OverlayRef,
+  PortalModule,
+  TemplatePortal
+} from "./chunk-XT7YFMOP.js";
+import "./chunk-XZ4YLRBB.js";
+import {
   animate,
   animateChild,
   group,
@@ -7,10 +20,13 @@ import {
   style,
   transition,
   trigger
+<<<<<<< HEAD
 } from "./chunk-LH4SUDXZ.js";
+=======
+} from "./chunk-UREEHHDU.js";
+>>>>>>> origin/Josep
 import {
   A11yModule,
-  BidiModule,
   Directionality,
   ESCAPE,
   FocusMonitor,
@@ -18,14 +34,9 @@ import {
   InteractivityChecker,
   MatCommonModule,
   Platform,
-  RtlScrollAxisType,
-  _getEventTarget,
   _getFocusedElementPierceShadowDom,
-  _isTestEnvironment,
-  coerceArray,
-  coerceCssPixelValue,
-  coerceElement,
   coerceNumberProperty,
+<<<<<<< HEAD
   getRtlScrollAxisType,
   hasModifierKey,
   supportsScrollBehavior
@@ -34,14 +45,19 @@ import {
   DOCUMENT,
   Location
 } from "./chunk-MG2RVQ25.js";
+=======
+  hasModifierKey
+} from "./chunk-EF2E4JG4.js";
+import {
+  DOCUMENT,
+  Location
+} from "./chunk-L72UBDQD.js";
+>>>>>>> origin/Josep
 import {
   ANIMATION_MODULE_TYPE,
-  ApplicationRef,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  ComponentFactoryResolver$1,
-  ConnectableObservable,
   Directive,
   ElementRef,
   EventEmitter,
@@ -51,46 +67,34 @@ import {
   Injector,
   Input,
   InputFlags,
-  IterableDiffers,
   NgModule,
   NgZone,
-  Observable,
   Optional,
-  Output,
   SkipSelf,
   Subject,
-  Subscription,
   TemplateRef,
   ViewChild,
-  ViewContainerRef,
   ViewEncapsulation$1,
+<<<<<<< HEAD
   animationFrameScheduler,
   asapScheduler,
   auditTime,
   booleanAttribute,
+=======
+  __spreadProps,
+  __spreadValues,
+>>>>>>> origin/Josep
   defer,
-  distinctUntilChanged,
   filter,
-  forwardRef,
-  fromEvent,
   inject,
-  isObservable,
   merge,
   of,
-  pairwise,
   setClassMetadata,
-  shareReplay,
   startWith,
-  switchMap,
   take,
-  takeUntil,
-  takeWhile,
   ɵɵInheritDefinitionFeature,
-  ɵɵInputTransformsFeature,
   ɵɵNgOnChangesFeature,
-  ɵɵProvidersFeature,
   ɵɵStandaloneFeature,
-  ɵɵadvance,
   ɵɵattribute,
   ɵɵclassProp,
   ɵɵdefineComponent,
@@ -99,20 +103,16 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵdirectiveInject,
-  ɵɵelement,
   ɵɵelementEnd,
   ɵɵelementStart,
-  ɵɵgetInheritedFactory,
   ɵɵhostProperty,
   ɵɵinject,
   ɵɵlistener,
   ɵɵloadQuery,
-  ɵɵprojection,
-  ɵɵprojectionDef,
   ɵɵqueryRefresh,
-  ɵɵstyleProp,
   ɵɵtemplate,
   ɵɵviewQuery
+<<<<<<< HEAD
 } from "./chunk-VT5A4BNA.js";
 import {
   __spreadProps,
@@ -4995,6 +4995,9 @@ var FullscreenOverlayContainer = _FullscreenOverlayContainer;
     type: Platform
   }], null);
 })();
+=======
+} from "./chunk-YW2W5TUJ.js";
+>>>>>>> origin/Josep
 
 // node_modules/@angular/cdk/fesm2022/dialog.mjs
 function CdkDialogContainer_ng_template_0_Template(rf, ctx) {
