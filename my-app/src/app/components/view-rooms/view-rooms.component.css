@@ -7,10 +7,11 @@
 }
 
 .games{
-    width: 48vw;
+    width: 28vw;
     padding-right: 10px;
     
 }
+.table-responsive {height:180px;}
 @media only screen and (max-width: 767px) {
   .games {
     flex-direction: column;
@@ -19,3 +20,4 @@
     width: 90vw;
   }
 }
+
