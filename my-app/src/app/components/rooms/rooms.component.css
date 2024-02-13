@@ -1,44 +1,25 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Sergi
+
 .container1{
   padding: 10px;
   width: 100vw;
   height: 100vh;
   background-color: #f3f3f3;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> Sergi
-=======
->>>>>>> Sergi
 .container2{
     padding: 0%;
     margin: 0% auto;
     border-radius: 10px;
-<<<<<<< HEAD
     background-color: #f3f3f3;
-<<<<<<< HEAD
-<<<<<<< HEAD
     height: 100%;
     width: 100%;
     background-color: purple;
-=======
     width: 100vw;
->>>>>>> Sergi
-=======
     height: 100%;
-=======
->>>>>>> Sergi
     width: 100%;
->>>>>>> Sergi
     padding: 1rem;  
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  
   }
   .stats,.rooms,.dashboard{
     height: 100%;

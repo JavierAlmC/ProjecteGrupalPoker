@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-stats',
@@ -8,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stats.component.css']  
 })
 export class StatsComponent implements OnInit {
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    const statsDiv = document.getElementById('stats');
+    statsDiv!.innerHTML='';
+    this.createBar(this.dataTable);
+    
+  }
 
   private dataTable = [
     ['nickname', 'dinero'],
