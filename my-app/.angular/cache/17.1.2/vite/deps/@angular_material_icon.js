@@ -1,5 +1,6 @@
 import {
   DomSanitizer
+<<<<<<< HEAD
 } from "./chunk-7VR2K72K.js";
 import {
   HttpClient
@@ -10,6 +11,18 @@ import {
 import {
   DOCUMENT
 } from "./chunk-L72UBDQD.js";
+=======
+} from "./chunk-67ULLJPC.js";
+import {
+  HttpClient
+} from "./chunk-TJX6JMHG.js";
+import {
+  MatCommonModule
+} from "./chunk-DYQ37AOI.js";
+import {
+  DOCUMENT
+} from "./chunk-MG2RVQ25.js";
+>>>>>>> Sergi
 import {
   Attribute,
   ChangeDetectionStrategy,
@@ -53,7 +66,12 @@ import {
   ɵɵinjectAttribute,
   ɵɵprojection,
   ɵɵprojectionDef
+<<<<<<< HEAD
 } from "./chunk-YW2W5TUJ.js";
+=======
+} from "./chunk-VT5A4BNA.js";
+import "./chunk-3EWR26GJ.js";
+>>>>>>> Sergi
 
 // node_modules/@angular/material/fesm2022/icon.mjs
 var _c0 = ["*"];

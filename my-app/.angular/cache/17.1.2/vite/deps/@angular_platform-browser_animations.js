@@ -6,6 +6,7 @@ import {
   NoopAnimationDriver,
   WebAnimationsDriver,
   WebAnimationsStyleNormalizer
+<<<<<<< HEAD
 } from "./chunk-JLRR7ZJY.js";
 import {
   BrowserModule,
@@ -16,6 +17,18 @@ import "./chunk-UREEHHDU.js";
 import {
   DOCUMENT
 } from "./chunk-L72UBDQD.js";
+=======
+} from "./chunk-LFGVIG6N.js";
+import {
+  BrowserModule,
+  DomRendererFactory2
+} from "./chunk-67ULLJPC.js";
+import "./chunk-TJX6JMHG.js";
+import "./chunk-LH4SUDXZ.js";
+import {
+  DOCUMENT
+} from "./chunk-MG2RVQ25.js";
+>>>>>>> Sergi
 import {
   ANIMATION_MODULE_TYPE,
   ChangeDetectionScheduler,
@@ -30,7 +43,12 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
+<<<<<<< HEAD
 } from "./chunk-YW2W5TUJ.js";
+=======
+} from "./chunk-VT5A4BNA.js";
+import "./chunk-3EWR26GJ.js";
+>>>>>>> Sergi
 
 // node_modules/@angular/platform-browser/fesm2022/animations.mjs
 var _InjectableAnimationEngine = class _InjectableAnimationEngine extends AnimationEngine {
