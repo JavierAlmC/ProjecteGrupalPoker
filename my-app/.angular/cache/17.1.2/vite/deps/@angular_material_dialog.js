@@ -21,9 +21,16 @@ import {
   transition,
   trigger
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from "./chunk-UREEHHDU.js";
 =======
 } from "./chunk-LH4SUDXZ.js";
+>>>>>>> Sergi
+=======
+} from "./chunk-LH4SUDXZ.js";
+=======
+} from "./chunk-UREEHHDU.js";
+>>>>>>> origin/Josep
 >>>>>>> Sergi
 import {
   A11yModule,
@@ -37,6 +44,7 @@ import {
   _getFocusedElementPierceShadowDom,
   coerceNumberProperty,
 <<<<<<< HEAD
+<<<<<<< HEAD
   hasModifierKey
 } from "./chunk-EF2E4JG4.js";
 import {
@@ -44,6 +52,8 @@ import {
   Location
 } from "./chunk-L72UBDQD.js";
 =======
+=======
+>>>>>>> Sergi
   getRtlScrollAxisType,
   hasModifierKey,
   supportsScrollBehavior
@@ -52,6 +62,17 @@ import {
   DOCUMENT,
   Location
 } from "./chunk-MG2RVQ25.js";
+<<<<<<< HEAD
+>>>>>>> Sergi
+=======
+=======
+  hasModifierKey
+} from "./chunk-EF2E4JG4.js";
+import {
+  DOCUMENT,
+  Location
+} from "./chunk-L72UBDQD.js";
+>>>>>>> origin/Josep
 >>>>>>> Sergi
 import {
   ANIMATION_MODULE_TYPE,
@@ -76,13 +97,23 @@ import {
   ViewChild,
   ViewEncapsulation$1,
 <<<<<<< HEAD
+<<<<<<< HEAD
   __spreadProps,
   __spreadValues,
 =======
+=======
+>>>>>>> Sergi
   animationFrameScheduler,
   asapScheduler,
   auditTime,
   booleanAttribute,
+<<<<<<< HEAD
+>>>>>>> Sergi
+=======
+=======
+  __spreadProps,
+  __spreadValues,
+>>>>>>> origin/Josep
 >>>>>>> Sergi
   defer,
   filter,
@@ -113,8 +144,11 @@ import {
   ɵɵtemplate,
   ɵɵviewQuery
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from "./chunk-YW2W5TUJ.js";
 =======
+=======
+>>>>>>> Sergi
 } from "./chunk-VT5A4BNA.js";
 import {
   __spreadProps,
@@ -4997,6 +5031,12 @@ var FullscreenOverlayContainer = _FullscreenOverlayContainer;
     type: Platform
   }], null);
 })();
+<<<<<<< HEAD
+>>>>>>> Sergi
+=======
+=======
+} from "./chunk-YW2W5TUJ.js";
+>>>>>>> origin/Josep
 >>>>>>> Sergi
 
 // node_modules/@angular/cdk/fesm2022/dialog.mjs

@@ -1,11 +1,20 @@
 import {
   DomSanitizer
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from "./chunk-7VR2K72K.js";
 import "./chunk-UDJGKBKW.js";
 =======
 } from "./chunk-67ULLJPC.js";
 import "./chunk-TJX6JMHG.js";
+>>>>>>> Sergi
+=======
+} from "./chunk-67ULLJPC.js";
+import "./chunk-TJX6JMHG.js";
+=======
+} from "./chunk-7VR2K72K.js";
+import "./chunk-UDJGKBKW.js";
+>>>>>>> origin/Josep
 >>>>>>> Sergi
 import {
   animate,
@@ -13,6 +22,7 @@ import {
   style,
   transition,
   trigger
+<<<<<<< HEAD
 <<<<<<< HEAD
 } from "./chunk-UREEHHDU.js";
 import {
@@ -25,6 +35,20 @@ import {
   DOCUMENT,
   NgIf
 } from "./chunk-MG2RVQ25.js";
+>>>>>>> Sergi
+=======
+} from "./chunk-LH4SUDXZ.js";
+import {
+  DOCUMENT,
+  NgIf
+} from "./chunk-MG2RVQ25.js";
+=======
+} from "./chunk-UREEHHDU.js";
+import {
+  DOCUMENT,
+  NgIf
+} from "./chunk-L72UBDQD.js";
+>>>>>>> origin/Josep
 >>>>>>> Sergi
 import {
   ApplicationRef,
@@ -74,13 +98,22 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate1
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from "./chunk-YW2W5TUJ.js";
 =======
+=======
+>>>>>>> Sergi
 } from "./chunk-VT5A4BNA.js";
 import {
   __spreadProps,
   __spreadValues
 } from "./chunk-3EWR26GJ.js";
+<<<<<<< HEAD
+>>>>>>> Sergi
+=======
+=======
+} from "./chunk-YW2W5TUJ.js";
+>>>>>>> origin/Josep
 >>>>>>> Sergi
 
 // node_modules/ngx-toastr/fesm2022/ngx-toastr.mjs

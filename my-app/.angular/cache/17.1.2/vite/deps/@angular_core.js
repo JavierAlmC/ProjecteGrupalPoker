@@ -432,8 +432,17 @@ import {
   ɵɵtrustConstantResourceUrl,
   ɵɵvalidateIframeAttribute,
   ɵɵviewQuery
+<<<<<<< HEAD
 } from "./chunk-VT5A4BNA.js";
 import "./chunk-3EWR26GJ.js";
+=======
+<<<<<<< HEAD
+} from "./chunk-VT5A4BNA.js";
+import "./chunk-3EWR26GJ.js";
+=======
+} from "./chunk-YW2W5TUJ.js";
+>>>>>>> origin/Josep
+>>>>>>> Sergi
 export {
   ANIMATION_MODULE_TYPE,
   APP_BOOTSTRAP_LISTENER,

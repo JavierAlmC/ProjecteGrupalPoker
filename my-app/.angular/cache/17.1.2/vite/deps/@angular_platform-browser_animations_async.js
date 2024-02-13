@@ -1,17 +1,23 @@
 import {
   DomRendererFactory2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Sergi
 } from "./chunk-7VR2K72K.js";
 import "./chunk-UDJGKBKW.js";
 import {
   DOCUMENT
 } from "./chunk-L72UBDQD.js";
+<<<<<<< HEAD
 =======
 } from "./chunk-67ULLJPC.js";
 import "./chunk-TJX6JMHG.js";
 import {
   DOCUMENT
 } from "./chunk-MG2RVQ25.js";
+>>>>>>> Sergi
+=======
 >>>>>>> Sergi
 import {
   ANIMATION_MODULE_TYPE,
@@ -26,10 +32,14 @@ import {
   ɵɵdefineInjectable,
   ɵɵinvalidFactory
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from "./chunk-YW2W5TUJ.js";
 =======
 } from "./chunk-VT5A4BNA.js";
 import "./chunk-3EWR26GJ.js";
+>>>>>>> Sergi
+=======
+} from "./chunk-YW2W5TUJ.js";
 >>>>>>> Sergi
 
 // node_modules/@angular/platform-browser/fesm2022/animations/async.mjs
@@ -59,9 +69,13 @@ var _AsyncAnimationRendererFactory = class _AsyncAnimationRendererFactory {
    */
   loadImpl() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const moduleImpl = this.moduleImpl ?? import("./browser-72EC7EDV.js");
 =======
     const moduleImpl = this.moduleImpl ?? import("./browser-IAGCVUIY.js");
+>>>>>>> Sergi
+=======
+    const moduleImpl = this.moduleImpl ?? import("./browser-72EC7EDV.js");
 >>>>>>> Sergi
     return moduleImpl.catch((e) => {
       throw new RuntimeError(5300, (typeof ngDevMode === "undefined" || ngDevMode) && "Async loading for animations package was enabled, but loading failed. Angular falls back to using regular rendering. No animations will be displayed and their styles won't be applied.");

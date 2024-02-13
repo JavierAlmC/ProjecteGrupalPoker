@@ -1,11 +1,20 @@
 import {
   Title
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from "./chunk-7VR2K72K.js";
 import "./chunk-UDJGKBKW.js";
 =======
 } from "./chunk-67ULLJPC.js";
 import "./chunk-TJX6JMHG.js";
+>>>>>>> Sergi
+=======
+} from "./chunk-67ULLJPC.js";
+import "./chunk-TJX6JMHG.js";
+=======
+} from "./chunk-7VR2K72K.js";
+import "./chunk-UDJGKBKW.js";
+>>>>>>> origin/Josep
 >>>>>>> Sergi
 import {
   DOCUMENT,
@@ -16,9 +25,16 @@ import {
   PathLocationStrategy,
   ViewportScroller
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from "./chunk-L72UBDQD.js";
 =======
 } from "./chunk-MG2RVQ25.js";
+>>>>>>> Sergi
+=======
+} from "./chunk-MG2RVQ25.js";
+=======
+} from "./chunk-L72UBDQD.js";
+>>>>>>> origin/Josep
 >>>>>>> Sergi
 import {
   APP_BOOTSTRAP_LISTENER,
@@ -121,13 +137,22 @@ import {
   ɵɵqueryRefresh,
   ɵɵsanitizeUrlOrResourceUrl
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from "./chunk-YW2W5TUJ.js";
 =======
+=======
+>>>>>>> Sergi
 } from "./chunk-VT5A4BNA.js";
 import {
   __spreadProps,
   __spreadValues
 } from "./chunk-3EWR26GJ.js";
+<<<<<<< HEAD
+>>>>>>> Sergi
+=======
+=======
+} from "./chunk-YW2W5TUJ.js";
+>>>>>>> origin/Josep
 >>>>>>> Sergi
 
 // node_modules/@angular/router/fesm2022/router.mjs

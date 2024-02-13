@@ -1,7 +1,11 @@
 import {
   DomSanitizer
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from "./chunk-7VR2K72K.js";
+=======
+} from "./chunk-67ULLJPC.js";
+>>>>>>> Sergi
 import {
   HttpClient
 } from "./chunk-UDJGKBKW.js";
@@ -10,9 +14,15 @@ import {
 } from "./chunk-EF2E4JG4.js";
 import {
   DOCUMENT
+<<<<<<< HEAD
 } from "./chunk-L72UBDQD.js";
 =======
 } from "./chunk-67ULLJPC.js";
+=======
+} from "./chunk-MG2RVQ25.js";
+=======
+} from "./chunk-7VR2K72K.js";
+>>>>>>> Sergi
 import {
   HttpClient
 } from "./chunk-TJX6JMHG.js";
@@ -21,7 +31,12 @@ import {
 } from "./chunk-DYQ37AOI.js";
 import {
   DOCUMENT
+<<<<<<< HEAD
 } from "./chunk-MG2RVQ25.js";
+>>>>>>> Sergi
+=======
+} from "./chunk-L72UBDQD.js";
+>>>>>>> origin/Josep
 >>>>>>> Sergi
 import {
   Attribute,
@@ -67,10 +82,18 @@ import {
   ɵɵprojection,
   ɵɵprojectionDef
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from "./chunk-YW2W5TUJ.js";
 =======
 } from "./chunk-VT5A4BNA.js";
 import "./chunk-3EWR26GJ.js";
+>>>>>>> Sergi
+=======
+} from "./chunk-VT5A4BNA.js";
+import "./chunk-3EWR26GJ.js";
+=======
+} from "./chunk-YW2W5TUJ.js";
+>>>>>>> origin/Josep
 >>>>>>> Sergi
 
 // node_modules/@angular/material/fesm2022/icon.mjs

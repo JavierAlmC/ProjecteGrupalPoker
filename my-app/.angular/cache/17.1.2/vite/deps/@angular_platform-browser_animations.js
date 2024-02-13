@@ -7,6 +7,9 @@ import {
   WebAnimationsDriver,
   WebAnimationsStyleNormalizer
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Sergi
 } from "./chunk-JLRR7ZJY.js";
 import {
   BrowserModule,
@@ -17,6 +20,7 @@ import "./chunk-UREEHHDU.js";
 import {
   DOCUMENT
 } from "./chunk-L72UBDQD.js";
+<<<<<<< HEAD
 =======
 } from "./chunk-LFGVIG6N.js";
 import {
@@ -28,6 +32,8 @@ import "./chunk-LH4SUDXZ.js";
 import {
   DOCUMENT
 } from "./chunk-MG2RVQ25.js";
+>>>>>>> Sergi
+=======
 >>>>>>> Sergi
 import {
   ANIMATION_MODULE_TYPE,
@@ -44,10 +50,14 @@ import {
   ɵɵdefineNgModule,
   ɵɵinject
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from "./chunk-YW2W5TUJ.js";
 =======
 } from "./chunk-VT5A4BNA.js";
 import "./chunk-3EWR26GJ.js";
+>>>>>>> Sergi
+=======
+} from "./chunk-YW2W5TUJ.js";
 >>>>>>> Sergi
 
 // node_modules/@angular/platform-browser/fesm2022/animations.mjs

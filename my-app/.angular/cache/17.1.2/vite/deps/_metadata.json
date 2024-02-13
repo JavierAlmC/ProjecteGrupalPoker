@@ -1,23 +1,42 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  "hash": "87b17bd4",
+  "configHash": "638049a1",
+  "lockfileHash": "fc887a07",
+  "browserHash": "1fcac523",
+=======
+>>>>>>> Sergi
   "hash": "1ea9af9a",
   "configHash": "07cff909",
   "lockfileHash": "921a5c0b",
   "browserHash": "079f4907",
+<<<<<<< HEAD
 =======
   "hash": "87b17bd4",
   "configHash": "638049a1",
   "lockfileHash": "fc887a07",
   "browserHash": "1fcac523",
 >>>>>>> Sergi
+=======
+>>>>>>> origin/Josep
+>>>>>>> Sergi
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "fileHash": "088d7919",
 =======
       "fileHash": "54309408",
+>>>>>>> Sergi
+=======
+      "fileHash": "54309408",
+=======
+      "fileHash": "088d7919",
+>>>>>>> origin/Josep
 >>>>>>> Sergi
       "needsInterop": false
     },
@@ -25,9 +44,16 @@
       "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "fileHash": "8f286748",
 =======
       "fileHash": "b844e270",
+>>>>>>> Sergi
+=======
+      "fileHash": "b844e270",
+=======
+      "fileHash": "8f286748",
+>>>>>>> origin/Josep
 >>>>>>> Sergi
       "needsInterop": false
     },
@@ -35,9 +61,16 @@
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "fileHash": "a4cb3f0e",
 =======
       "fileHash": "e7a5d6a3",
+>>>>>>> Sergi
+=======
+      "fileHash": "e7a5d6a3",
+=======
+      "fileHash": "a4cb3f0e",
+>>>>>>> origin/Josep
 >>>>>>> Sergi
       "needsInterop": false
     },
@@ -45,9 +78,16 @@
       "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "fileHash": "05280376",
 =======
       "fileHash": "b3c0bcdf",
+>>>>>>> Sergi
+=======
+      "fileHash": "b3c0bcdf",
+=======
+      "fileHash": "05280376",
+>>>>>>> origin/Josep
 >>>>>>> Sergi
       "needsInterop": false
     },
@@ -55,9 +95,16 @@
       "src": "../../../../../node_modules/@angular/material/fesm2022/button.mjs",
       "file": "@angular_material_button.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "fileHash": "400ac80b",
 =======
       "fileHash": "6e8515d8",
+>>>>>>> Sergi
+=======
+      "fileHash": "6e8515d8",
+=======
+      "fileHash": "400ac80b",
+>>>>>>> origin/Josep
 >>>>>>> Sergi
       "needsInterop": false
     },
@@ -65,9 +112,16 @@
       "src": "../../../../../node_modules/@angular/material/fesm2022/card.mjs",
       "file": "@angular_material_card.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "fileHash": "07783b94",
 =======
       "fileHash": "cb657691",
+>>>>>>> Sergi
+=======
+      "fileHash": "cb657691",
+=======
+      "fileHash": "07783b94",
+>>>>>>> origin/Josep
 >>>>>>> Sergi
       "needsInterop": false
     },
@@ -75,9 +129,16 @@
       "src": "../../../../../node_modules/@angular/material/fesm2022/dialog.mjs",
       "file": "@angular_material_dialog.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "fileHash": "ee762a6c",
 =======
       "fileHash": "fb636cd1",
+>>>>>>> Sergi
+=======
+      "fileHash": "fb636cd1",
+=======
+      "fileHash": "ee762a6c",
+>>>>>>> origin/Josep
 >>>>>>> Sergi
       "needsInterop": false
     },
@@ -85,9 +146,16 @@
       "src": "../../../../../node_modules/@angular/material/fesm2022/form-field.mjs",
       "file": "@angular_material_form-field.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "fileHash": "eee54ef8",
 =======
       "fileHash": "e3b5ead3",
+>>>>>>> Sergi
+=======
+      "fileHash": "e3b5ead3",
+=======
+      "fileHash": "eee54ef8",
+>>>>>>> origin/Josep
 >>>>>>> Sergi
       "needsInterop": false
     },
@@ -95,9 +163,16 @@
       "src": "../../../../../node_modules/@angular/material/fesm2022/icon.mjs",
       "file": "@angular_material_icon.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "fileHash": "0e0b417f",
 =======
       "fileHash": "89d5027a",
+>>>>>>> Sergi
+=======
+      "fileHash": "89d5027a",
+=======
+      "fileHash": "0e0b417f",
+>>>>>>> origin/Josep
 >>>>>>> Sergi
       "needsInterop": false
     },
@@ -105,6 +180,11 @@
       "src": "../../../../../node_modules/@angular/material/fesm2022/input.mjs",
       "file": "@angular_material_input.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      "fileHash": "b3026220",
+=======
+>>>>>>> Sergi
       "fileHash": "ad0766dc",
       "needsInterop": false
     },
@@ -118,8 +198,12 @@
       "src": "../../../../../node_modules/@angular/material/fesm2022/table.mjs",
       "file": "@angular_material_table.js",
       "fileHash": "07f20b02",
+<<<<<<< HEAD
 =======
       "fileHash": "b3026220",
+>>>>>>> Sergi
+=======
+>>>>>>> origin/Josep
 >>>>>>> Sergi
       "needsInterop": false
     },
@@ -127,9 +211,16 @@
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "fileHash": "86c1f908",
 =======
       "fileHash": "f4a4eddf",
+>>>>>>> Sergi
+=======
+      "fileHash": "f4a4eddf",
+=======
+      "fileHash": "86c1f908",
+>>>>>>> origin/Josep
 >>>>>>> Sergi
       "needsInterop": false
     },
@@ -137,9 +228,16 @@
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations.mjs",
       "file": "@angular_platform-browser_animations.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "fileHash": "f9499894",
 =======
       "fileHash": "ab0b4892",
+>>>>>>> Sergi
+=======
+      "fileHash": "ab0b4892",
+=======
+      "fileHash": "f9499894",
+>>>>>>> origin/Josep
 >>>>>>> Sergi
       "needsInterop": false
     },
@@ -147,9 +245,16 @@
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations/async.mjs",
       "file": "@angular_platform-browser_animations_async.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "fileHash": "2411e07d",
 =======
       "fileHash": "5ac0e393",
+>>>>>>> Sergi
+=======
+      "fileHash": "5ac0e393",
+=======
+      "fileHash": "2411e07d",
+>>>>>>> origin/Josep
 >>>>>>> Sergi
       "needsInterop": false
     },
@@ -157,9 +262,16 @@
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "fileHash": "cf2e07c0",
 =======
       "fileHash": "7d98d8ce",
+>>>>>>> Sergi
+=======
+      "fileHash": "7d98d8ce",
+=======
+      "fileHash": "cf2e07c0",
+>>>>>>> origin/Josep
 >>>>>>> Sergi
       "needsInterop": false
     },
@@ -167,8 +279,11 @@
       "src": "../../../../../node_modules/ngx-toastr/fesm2022/ngx-toastr.mjs",
       "file": "ngx-toastr.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "fileHash": "6c82d244",
 =======
+=======
+>>>>>>> Sergi
       "fileHash": "cfc38ba1",
       "needsInterop": false
     },
@@ -182,12 +297,54 @@
       "src": "../../../../../node_modules/angular-google-charts/fesm2020/angular-google-charts.mjs",
       "file": "angular-google-charts.js",
       "fileHash": "5bf2f9c1",
+<<<<<<< HEAD
+>>>>>>> Sergi
+=======
+=======
+      "fileHash": "6c82d244",
+>>>>>>> origin/Josep
 >>>>>>> Sergi
       "needsInterop": false
     }
   },
   "chunks": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    "browser-IAGCVUIY": {
+      "file": "browser-IAGCVUIY.js"
+    },
+    "chunk-LFGVIG6N": {
+      "file": "chunk-LFGVIG6N.js"
+    },
+    "chunk-Q3UZ3USK": {
+      "file": "chunk-Q3UZ3USK.js"
+    },
+    "chunk-67ULLJPC": {
+      "file": "chunk-67ULLJPC.js"
+    },
+    "chunk-TJX6JMHG": {
+      "file": "chunk-TJX6JMHG.js"
+    },
+    "chunk-ABSG3YJU": {
+      "file": "chunk-ABSG3YJU.js"
+    },
+    "chunk-LH4SUDXZ": {
+      "file": "chunk-LH4SUDXZ.js"
+    },
+    "chunk-DYQ37AOI": {
+      "file": "chunk-DYQ37AOI.js"
+    },
+    "chunk-MG2RVQ25": {
+      "file": "chunk-MG2RVQ25.js"
+    },
+    "chunk-VT5A4BNA": {
+      "file": "chunk-VT5A4BNA.js"
+    },
+    "chunk-3EWR26GJ": {
+      "file": "chunk-3EWR26GJ.js"
+=======
+>>>>>>> Sergi
     "browser-72EC7EDV": {
       "file": "browser-72EC7EDV.js"
     },
@@ -226,6 +383,7 @@
     },
     "chunk-YW2W5TUJ": {
       "file": "chunk-YW2W5TUJ.js"
+<<<<<<< HEAD
 =======
     "browser-IAGCVUIY": {
       "file": "browser-IAGCVUIY.js"
@@ -259,6 +417,9 @@
     },
     "chunk-3EWR26GJ": {
       "file": "chunk-3EWR26GJ.js"
+>>>>>>> Sergi
+=======
+>>>>>>> origin/Josep
 >>>>>>> Sergi
     }
   }

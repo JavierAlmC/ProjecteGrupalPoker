@@ -96,10 +96,24 @@ import {
   provideImgixLoader,
   registerLocaleData,
   setRootDomAdapter
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+} from "./chunk-MG2RVQ25.js";
+import {
+  IMAGE_CONFIG
+} from "./chunk-VT5A4BNA.js";
+import "./chunk-3EWR26GJ.js";
+=======
+>>>>>>> Sergi
 } from "./chunk-L72UBDQD.js";
 import {
   IMAGE_CONFIG
 } from "./chunk-YW2W5TUJ.js";
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Josep
+>>>>>>> Sergi
 export {
   APP_BASE_HREF,
   AsyncPipe,

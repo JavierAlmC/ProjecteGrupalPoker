@@ -36,6 +36,7 @@ import {
   withHttpTransferCacheOptions,
   withNoHttpTransferCache
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from "./chunk-7VR2K72K.js";
 import "./chunk-UDJGKBKW.js";
 import {
@@ -43,6 +44,8 @@ import {
 } from "./chunk-L72UBDQD.js";
 import "./chunk-YW2W5TUJ.js";
 =======
+=======
+>>>>>>> Sergi
 } from "./chunk-67ULLJPC.js";
 import "./chunk-TJX6JMHG.js";
 import {
@@ -50,6 +53,17 @@ import {
 } from "./chunk-MG2RVQ25.js";
 import "./chunk-VT5A4BNA.js";
 import "./chunk-3EWR26GJ.js";
+<<<<<<< HEAD
+>>>>>>> Sergi
+=======
+=======
+} from "./chunk-7VR2K72K.js";
+import "./chunk-UDJGKBKW.js";
+import {
+  getDOM
+} from "./chunk-L72UBDQD.js";
+import "./chunk-YW2W5TUJ.js";
+>>>>>>> origin/Josep
 >>>>>>> Sergi
 export {
   BrowserModule,

@@ -1,5 +1,6 @@
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
   MAT_BUTTON_CONFIG,
   MAT_FAB_DEFAULT_OPTIONS,
   MAT_FAB_DEFAULT_OPTIONS_FACTORY,
@@ -17,6 +18,8 @@ import "./chunk-EF2E4JG4.js";
 import "./chunk-L72UBDQD.js";
 import "./chunk-YW2W5TUJ.js";
 =======
+=======
+>>>>>>> Sergi
   FocusMonitor,
   MatCommonModule,
   MatRippleLoader,
@@ -1199,6 +1202,27 @@ var MatButtonModule = _MatButtonModule;
     }]
   }], null, null);
 })();
+<<<<<<< HEAD
+>>>>>>> Sergi
+=======
+=======
+  MAT_BUTTON_CONFIG,
+  MAT_FAB_DEFAULT_OPTIONS,
+  MAT_FAB_DEFAULT_OPTIONS_FACTORY,
+  MatAnchor,
+  MatButton,
+  MatButtonModule,
+  MatFabAnchor,
+  MatFabButton,
+  MatIconAnchor,
+  MatIconButton,
+  MatMiniFabAnchor,
+  MatMiniFabButton
+} from "./chunk-YLPUEUIQ.js";
+import "./chunk-EF2E4JG4.js";
+import "./chunk-L72UBDQD.js";
+import "./chunk-YW2W5TUJ.js";
+>>>>>>> origin/Josep
 >>>>>>> Sergi
 export {
   MAT_BUTTON_CONFIG,
