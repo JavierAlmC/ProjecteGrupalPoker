@@ -74,7 +74,7 @@
   position: relative;
   padding: 12px 27px;
   border-radius: 12px;
-  font-size: 1.1rem;
+  font-size: 0.99vw;
   color: white;
   background: hsl(0deg 0% 20%);
   will-change: transform;
@@ -121,9 +121,9 @@
 .button-82-pushable:focus:not(:focus-visible) {
   outline: none;
 }
-@media only screen and (min-width: 937px) {
-  .button-82-front{
-    font-size: 0.95rem;
+@media only screen and (max-width: 937px) {
+  .button-82-front {
+    font-size: 3.5vw;
     width: 60%;
   }
   .button-82-edge{
@@ -146,26 +146,26 @@
   padding: 20px;
 
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
+  text-align: center;
+}
+
 .money h2 {
   color: black;
   font-size: 1.5em;
   font-weight: bold;
   margin: 0;
 }
-@media only screen and (min-width: 437px) {
-  .button-82-front{
-    font-size: 0.75rem;
+/*rendiment*/
+.rediment{
+  margin-top: 15px;
   align-items: center;
   height: 100px;
   width: 18vw;
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
+  text-align: center;
+}
 
 .rendiment h2 {
   color: black;
