@@ -1,0 +1,144 @@
+<div class="register">
+<mat-card class="card">
+  <mat-card-header class="title">Register</mat-card-header>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form">
+    <mat-form-field class="field">
+      <mat-label>Nickname</mat-label>
+      <input
+        matInput
+        type="text"
+        formControlName="nickname"
+        [class.invalid]="
+          registerForm.get('nickname')?.invalid &&
+          (registerForm.get('nickname')?.dirty ||
+            registerForm.get('nickname')?.touched ||
+            isSubmitted)
+        "
+      />
+      @if (registerForm.get('nickname')?.hasError('required')&&
+      (registerForm.get('nickname')?.dirty ||
+      registerForm.get('nickname')?.touched || isSubmitted)) {
+      <mat-error>Nickname is required</mat-error>
+      } @if (registerForm.get('nickname')?.hasError('minlength')&&
+      (registerForm.get('nickname')?.dirty ||
+      registerForm.get('nickname')?.touched || isSubmitted)) {
+      <mat-error>Nickname length must be at least 4 characters</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field class="field">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        type="text"
+        formControlName="nombre"
+        [class.invalid]="
+          registerForm.get('nombre')?.invalid &&
+          (registerForm.get('nombre')?.dirty ||
+            registerForm.get('nombre')?.touched ||
+            isSubmitted)
+        "
+      />
+      @if (registerForm.get('nombre')?.hasError('required')&&
+      (registerForm.get('nombre')?.dirty || registerForm.get('nombre')?.touched
+      || isSubmitted)) {
+      <mat-error>Name is required</mat-error>
+      } @if (registerForm.get('nombre')?.hasError('minlength')&&
+      (registerForm.get('nombre')?.dirty || registerForm.get('nombre')?.touched
+      || isSubmitted)) {
+      <mat-error>Name length must be at least 4 characters</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field class="field">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        type="text"
+        formControlName="email"
+        [class.invalid]="
+          registerForm.get('email')?.invalid &&
+          (registerForm.get('email')?.dirty ||
+            registerForm.get('email')?.touched ||
+            isSubmitted)
+        "
+      />
+      @if (registerForm.get('email')?.hasError('required')&&
+      (registerForm.get('email')?.dirty || registerForm.get('email')?.touched ||
+      isSubmitted)) {
+      <mat-error>Email is required</mat-error>
+      } @if (registerForm.get('email')?.hasError('email')&&
+      (registerForm.get('email')?.dirty || registerForm.get('email')?.touched ||
+      isSubmitted)) {
+      <mat-error>Invalid email format</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field class="field">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        type="password"
+        formControlName="password"
+        [class.invalid]="
+          registerForm.get('password')?.invalid &&
+          (registerForm.get('password')?.dirty ||
+            registerForm.get('password')?.touched ||
+            isSubmitted)
+        "
+        [type]="hide ? 'password' : 'text'"
+      />
+      <mat-icon matSuffix (click)="hide = !hide">{{
+        hide ? "visibility_off" : "visibility"
+      }}</mat-icon>
+      @if(registerForm.get('password')?.hasError('required') &&
+      (registerForm.get('password')?.dirty ||
+      registerForm.get('password')?.touched || isSubmitted)) {
+      <mat-error>Password is required</mat-error>
+      } @if (registerForm.get('password')?.hasError('minlength')&&
+      (registerForm.get('password')?.dirty ||
+      registerForm.get('password')?.touched || isSubmitted)) {
+      <mat-error>Password length must be at least 4 characters</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field class="field">
+      <mat-label>Confirm password</mat-label>
+      <input
+        matInput
+        type="confirmPassword"
+        formControlName="confirmPassword"
+        [class.invalid]="
+          registerForm.get('confirmPassword')?.invalid &&
+          (registerForm.get('confirmPassword')?.dirty ||
+            registerForm.get('confirmPassword')?.touched ||
+            isSubmitted)
+        "
+        [type]="hideC ? 'password' : 'text'"
+      />
+      <mat-icon matSuffix (click)="hideC = !hideC">{{
+        hideC ? "visibility_off" : "visibility"
+      }}</mat-icon>
+      @if(registerForm.get('confirmPassword')?.hasError('required') &&
+      (registerForm.get('confirmPassword')?.dirty ||
+      registerForm.get('confirmPassword')?.touched || isSubmitted)) {
+      <mat-error>You must repeat your password</mat-error>
+      } @if ( registerForm.hasError('confirmedValidator')) {
+      <mat-error>Password does not match</mat-error>
+      }
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      class="submit-button"
+    >
+      Submit
+    </button>
+    <button mat-raised-button color="link" color="accent" (click)="login()">
+      Already have an account? Log in
+    </button>
+  </form>
+</mat-card>
+</div>

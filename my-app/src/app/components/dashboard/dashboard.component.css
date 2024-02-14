@@ -1,0 +1,14 @@
+.create_game{
+    height: 100px;   
+    width: 18vw;
+    background-color: red;
+}
+@media only screen and (max-width: 937px) {
+    .create_game {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      width: 90vw;
+      background-color: orange;
+    }
+  }

@@ -1,0 +1,32 @@
+<mat-table class="table" [dataSource]="dataSource">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef class="idtype">Id</th>
+    <td mat-cell *matCellDef="let game" class="idtype">{{ game.id }}</td>
+  </ng-container>
+  <ng-container matColumnDef="players">
+    <th mat-header-cell *matHeaderCellDef class="playerstype">Players</th>
+    <td mat-cell *matCellDef="let game" class="playerstype">
+      {{ game.descripcion }}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef class="actiontype"></th>
+    <td mat-cell *matCellDef="let game" class="actiontype">
+      <button mat-raised-button color="primary" (click)="join(game.id)">
+        Join
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+</mat-table>
+@if(isLoading){
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+}
+<mat-paginator
+  #paginator
+  [length]="totalData"
+  [pageSizeOptions]="pageSizes"
+  showFirstLastButtons
+></mat-paginator>
