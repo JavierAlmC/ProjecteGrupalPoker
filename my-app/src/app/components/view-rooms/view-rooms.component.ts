@@ -33,6 +33,7 @@ export class ViewRoomsComponent {
 
   fetchTableData(currentPage: number, pageSize: number) {
     this.gamesService.getGames(currentPage, pageSize).subscribe((gamesData) => {
+      console.log(gamesData);
       this.totalData = gamesData.totalItems;
       this.gamesData = gamesData.data;
       this.dataSource = new MatTableDataSource(this.gamesData);
@@ -45,7 +46,7 @@ export class ViewRoomsComponent {
 
     this.dataSource.paginator = this.paginator;
 
-    this.fetchTableData(this.paginator.pageIndex + 1, this.paginator.pageSize);
+    this.fetchTableData(this.paginator.pageIndex, this.paginator.pageSize);
   }
   /*
   ngOnInit(): void {
