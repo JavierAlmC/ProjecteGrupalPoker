@@ -22,7 +22,7 @@ export class StatsComponent implements OnInit {
     ['Pepe', 700],
     ['Luis', 500],
     ['Ana', 250],
-    ['Maria', 50]
+    ['Maria', 150]
   ];
 
   ngOnInit(): void {
