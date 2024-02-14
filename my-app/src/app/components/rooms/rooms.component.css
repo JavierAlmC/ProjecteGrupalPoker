@@ -1,8 +1,6 @@
 
 .container1{
   padding: 10px;
-  width: 100vw;
-  height: 100vh;
   background-color: #f3f3f3;
 }
 .container2{
@@ -10,12 +8,7 @@
     margin: 0% auto;
     border-radius: 10px;
     background-color: #f3f3f3;
-    height: 100%;
-    width: 100%;
-    background-color: purple;
-    width: 100vw;
-    height: 100%;
-    width: 100%;
+
     padding: 1rem;  
     display: flex;
     flex-direction: row;
