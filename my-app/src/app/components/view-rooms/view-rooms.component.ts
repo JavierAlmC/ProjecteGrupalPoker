@@ -6,6 +6,7 @@ import { Partida } from '../../interfaces/partida';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { TablePaginationService } from '../../services/table-pagination.service';
 import { Game } from '../../interfaces/game-table-model';
+import { Observable, forkJoin, map } from 'rxjs';
 
 @Component({
   selector: 'app-view-rooms',
@@ -21,7 +22,7 @@ import { Game } from '../../interfaces/game-table-model';
 })
 export class ViewRoomsComponent {
   isLoading: boolean = false;
-
+  idGame?: number;
   totalData: number = 0;
   gamesData: Game[] = [];
   pageSizes = [5, 10, 20];
@@ -36,6 +37,13 @@ export class ViewRoomsComponent {
       console.log(gamesData);
       this.totalData = gamesData.totalItems;
       this.gamesData = gamesData.data;
+      this.gamesData.map((game, index) => {
+        this.idGame = game.idGame;
+        this.gamesService.getPlayers(this.idGame).subscribe((players) => {
+          this.gamesData[index].players = players.players;
+          console.log(this.gamesData[index])
+        })
+      })
       this.dataSource = new MatTableDataSource(this.gamesData);
     });
   }
