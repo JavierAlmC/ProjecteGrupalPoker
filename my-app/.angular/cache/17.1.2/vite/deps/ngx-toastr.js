@@ -1,31 +1,18 @@
 import {
-  DomSanitizer
-<<<<<<< HEAD
-} from "./chunk-67ULLJPC.js";
-import "./chunk-TJX6JMHG.js";
-=======
-} from "./chunk-7VR2K72K.js";
-import "./chunk-UDJGKBKW.js";
->>>>>>> origin/Josep
-import {
   animate,
   state,
   style,
   transition,
   trigger
-<<<<<<< HEAD
-} from "./chunk-LH4SUDXZ.js";
+} from "./chunk-LIN5XROT.js";
+import {
+  DomSanitizer
+} from "./chunk-S3675LEJ.js";
+import "./chunk-RMVRHTLM.js";
 import {
   DOCUMENT,
   NgIf
-} from "./chunk-MG2RVQ25.js";
-=======
-} from "./chunk-UREEHHDU.js";
-import {
-  DOCUMENT,
-  NgIf
-} from "./chunk-L72UBDQD.js";
->>>>>>> origin/Josep
+} from "./chunk-42MLWHQO.js";
 import {
   ApplicationRef,
   Component,
@@ -41,7 +28,6 @@ import {
   NgModule,
   NgZone,
   SecurityContext,
-  Subject,
   inject,
   makeEnvironmentProviders,
   setClassMetadata,
@@ -73,15 +59,12 @@ import {
   ɵɵtemplate,
   ɵɵtext,
   ɵɵtextInterpolate1
-<<<<<<< HEAD
-} from "./chunk-VT5A4BNA.js";
+} from "./chunk-MUPCDZEB.js";
 import {
+  Subject,
   __spreadProps,
   __spreadValues
-} from "./chunk-3EWR26GJ.js";
-=======
-} from "./chunk-YW2W5TUJ.js";
->>>>>>> origin/Josep
+} from "./chunk-SXIXOCJ4.js";
 
 // node_modules/ngx-toastr/fesm2022/ngx-toastr.mjs
 var _c0 = ["toast-component", ""];
