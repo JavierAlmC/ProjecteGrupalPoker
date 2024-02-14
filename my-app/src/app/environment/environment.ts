@@ -1,1 +1,1 @@
-export const URL_SPRING = 'http://localhost:8090/';
+export const URL_SPRING = 'http://localhost:8090';

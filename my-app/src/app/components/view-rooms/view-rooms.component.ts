@@ -61,26 +61,19 @@ export class ViewRoomsComponent {
     });
 
     this.dataSource.paginator = this.paginator;
+    console.log(
+      this.getTableData(this.paginator.pageIndex + 1, this.paginator.pageSize)
+    );
 
-    this.paginator.page
-      .pipe(
-        startWith({}),
-        switchMap(() => {
-          return this.getTableData(
-            this.paginator.pageIndex + 1,
-            this.paginator.pageSize
-          ).pipe(catchError(() => of(null)));
-        }),
-        map((gamesData) => {
-          if (gamesData == null) return [];
-          this.totalData = gamesData.totalItems;
-          return gamesData.data;
-        })
-      )
-      .subscribe((gamesData) => {
-        this.gamesData = gamesData;
-        this.dataSource = new MatTableDataSource(this.gamesData);
-      });
+    this.getTableData(
+      this.paginator.pageIndex + 1,
+      this.paginator.pageSize
+    ).subscribe((gamesData) => {
+      console.log(gamesData)
+      this.totalData = gamesData.totalItems;
+      this.gamesData = gamesData.data;
+      this.dataSource = new MatTableDataSource(this.gamesData);
+    });
   }
   /*
   ngOnInit(): void {
