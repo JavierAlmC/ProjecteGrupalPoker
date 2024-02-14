@@ -9,5 +9,6 @@ export const routes: Routes = [
     {path:'login', component:LoginComponent},
     {path:'register', component:RegistrationComponent},
     {path:'rooms', component:RoomsComponent},
+    {path:'profile', component:ProfileComponent},
     {path:'**', redirectTo: 'login', pathMatch:'full'},
 ];
