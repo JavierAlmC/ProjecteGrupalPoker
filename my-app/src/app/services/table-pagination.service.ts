@@ -8,8 +8,8 @@ import {
   HttpRequest,
 } from '@angular/common/http';
 import { BehaviorSubject, Observable, finalize } from 'rxjs';
-import { GameTable } from '../interfaces/game-table-model';
-import { URL_SPRING } from '../environment/environment';
+import { ApiResponse} from '../interfaces/game-table-model';
+import { URL_LOCAL_PROXY} from '../environment/environment';
 import { UserServicesService } from './user-services.service';
 @Injectable({
   providedIn: 'root',
@@ -31,13 +31,14 @@ export class TablePaginationService implements HttpInterceptor {
   public getGames(
     currentPage: Number,
     pageSize: Number
-  ): Observable<GameTable> {
+  ): Observable<ApiResponse> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${this.userService.getToken()}`,
+      'Authorization': `Bearer ${this.userService.getToken()}`,
+
     });
-    const url = `/api/v1/partidas?page=${currentPage}&size=${pageSize}`;
-    return this.http.get<GameTable>(url, { headers: headers });
+    const url = `/api/v1/partidas?page=${currentPage}&size=${pageSize}&sort=idGame,asc`;
+    return this.http.get<ApiResponse>(url,{ headers: headers, responseType: 'json' });
   }
 }
 export class InterceptorService implements HttpInterceptor {

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthData, NewUser } from '../interfaces/auth-data.model';
 import { Observable } from 'rxjs';
-import { URL_SPRING } from '../environment/environment';
+import { URL_LOCAL_PROXY} from '../environment/environment';
 import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -22,7 +22,7 @@ export class UserServicesService {
       // example Authorization header
       // Add more headers as needed
     });*/
-    return this.http.post(URL_SPRING + '/auth/login', authData);
+    return this.http.post('/auth/login', authData);
   }
 
   createUser(nickname: string, nombre: string, email: string, password: string): Observable<any> {
@@ -36,7 +36,7 @@ export class UserServicesService {
       password: password,
       roles : ["user"],
     };
-    return this.http.post(URL_SPRING + '/auth/nuevo', userData,{headers : headers});
+    return this.http.post('/auth/nuevo', userData,{headers : headers});
   }
   setToken(token: string) {
     //1 dia
