@@ -3,18 +3,7 @@ import {
   NgControl,
   NgForm,
   Validators
-<<<<<<< HEAD
-<<<<<<< HEAD
-} from "./chunk-GCPMTM4J.js";
-=======
-} from "./chunk-Q3UZ3USK.js";
->>>>>>> Sergi
-=======
-} from "./chunk-Q3UZ3USK.js";
-=======
-} from "./chunk-GCPMTM4J.js";
->>>>>>> origin/Josep
->>>>>>> Sergi
+} from "./chunk-SGARPFE7.js";
 import {
   MAT_FORM_FIELD,
   MatError,
@@ -25,22 +14,8 @@ import {
   MatLabel,
   MatPrefix,
   MatSuffix
-<<<<<<< HEAD
-<<<<<<< HEAD
-} from "./chunk-PNPMRSOY.js";
-import "./chunk-UREEHHDU.js";
-=======
-} from "./chunk-ABSG3YJU.js";
-import "./chunk-LH4SUDXZ.js";
->>>>>>> Sergi
-=======
-} from "./chunk-ABSG3YJU.js";
-import "./chunk-LH4SUDXZ.js";
-=======
-} from "./chunk-PNPMRSOY.js";
-import "./chunk-UREEHHDU.js";
->>>>>>> origin/Josep
->>>>>>> Sergi
+} from "./chunk-UKSCITEK.js";
+import "./chunk-LIN5XROT.js";
 import {
   ErrorStateMatcher,
   MatCommonModule,
@@ -51,32 +26,12 @@ import {
   coerceNumberProperty,
   getSupportedInputTypes,
   normalizePassiveListenerOptions
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-} from "./chunk-DYQ37AOI.js";
+} from "./chunk-UNK5VNFO.js";
 import {
   DOCUMENT
-} from "./chunk-MG2RVQ25.js";
-=======
->>>>>>> Sergi
-} from "./chunk-EF2E4JG4.js";
-import {
-  DOCUMENT
-} from "./chunk-L72UBDQD.js";
-<<<<<<< HEAD
-=======
-} from "./chunk-DYQ37AOI.js";
-import {
-  DOCUMENT
-} from "./chunk-MG2RVQ25.js";
->>>>>>> Sergi
-=======
->>>>>>> origin/Josep
->>>>>>> Sergi
+} from "./chunk-42MLWHQO.js";
 import {
   Directive,
-  EMPTY,
   ElementRef,
   EventEmitter,
   Inject,
@@ -89,12 +44,8 @@ import {
   Optional,
   Output,
   Self,
-  Subject,
-  auditTime,
   booleanAttribute,
-  fromEvent,
   setClassMetadata,
-  takeUntil,
   ɵɵInputTransformsFeature,
   ɵɵNgOnChangesFeature,
   ɵɵProvidersFeature,
@@ -108,20 +59,14 @@ import {
   ɵɵhostProperty,
   ɵɵinject,
   ɵɵlistener
-<<<<<<< HEAD
-<<<<<<< HEAD
-} from "./chunk-YW2W5TUJ.js";
-=======
-} from "./chunk-VT5A4BNA.js";
-import "./chunk-3EWR26GJ.js";
->>>>>>> Sergi
-=======
-} from "./chunk-VT5A4BNA.js";
-import "./chunk-3EWR26GJ.js";
-=======
-} from "./chunk-YW2W5TUJ.js";
->>>>>>> origin/Josep
->>>>>>> Sergi
+} from "./chunk-MUPCDZEB.js";
+import {
+  EMPTY,
+  Subject,
+  auditTime,
+  fromEvent,
+  takeUntil
+} from "./chunk-SXIXOCJ4.js";
 
 // node_modules/@angular/cdk/fesm2022/text-field.mjs
 var listenerOptions = normalizePassiveListenerOptions({

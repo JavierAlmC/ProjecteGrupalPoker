@@ -36,27 +36,10 @@ import {
   withNoXsrfProtection,
   withRequestsMadeViaParent,
   withXsrfConfiguration
-<<<<<<< HEAD
-<<<<<<< HEAD
-} from "./chunk-UDJGKBKW.js";
-import "./chunk-L72UBDQD.js";
-import "./chunk-YW2W5TUJ.js";
-=======
-=======
->>>>>>> Sergi
-} from "./chunk-TJX6JMHG.js";
-import "./chunk-MG2RVQ25.js";
-import "./chunk-VT5A4BNA.js";
-import "./chunk-3EWR26GJ.js";
-<<<<<<< HEAD
->>>>>>> Sergi
-=======
-=======
-} from "./chunk-UDJGKBKW.js";
-import "./chunk-L72UBDQD.js";
-import "./chunk-YW2W5TUJ.js";
->>>>>>> origin/Josep
->>>>>>> Sergi
+} from "./chunk-RMVRHTLM.js";
+import "./chunk-42MLWHQO.js";
+import "./chunk-MUPCDZEB.js";
+import "./chunk-SXIXOCJ4.js";
 export {
   FetchBackend,
   HTTP_INTERCEPTORS,

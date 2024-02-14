@@ -6,7 +6,15 @@
   
 }
 }
+.table, mat-paginator {
+  border: 1px solid grey;
+}
 
+
+td, th {
+  text-align: center !important;
+  vertical-align: middle !important;
+}
 
 .table-responsive {height:180px;}
 @media only screen and (max-width: 937px) {
@@ -18,3 +26,15 @@
   }
 }
 
+.idtype{
+  width: 10%;
+}
+.playerstype{
+  width: 40%;
+}
+.actiontype{
+  width: 50%;
+}
+.table{
+  width: 100%;
+}

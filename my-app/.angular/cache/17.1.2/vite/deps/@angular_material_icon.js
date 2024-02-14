@@ -1,43 +1,15 @@
 import {
   DomSanitizer
-<<<<<<< HEAD
-<<<<<<< HEAD
-} from "./chunk-7VR2K72K.js";
-=======
-} from "./chunk-67ULLJPC.js";
->>>>>>> Sergi
+} from "./chunk-S3675LEJ.js";
 import {
   HttpClient
-} from "./chunk-UDJGKBKW.js";
+} from "./chunk-RMVRHTLM.js";
 import {
   MatCommonModule
-} from "./chunk-EF2E4JG4.js";
+} from "./chunk-UNK5VNFO.js";
 import {
   DOCUMENT
-<<<<<<< HEAD
-} from "./chunk-L72UBDQD.js";
-=======
-} from "./chunk-67ULLJPC.js";
-=======
-} from "./chunk-MG2RVQ25.js";
-=======
-} from "./chunk-7VR2K72K.js";
->>>>>>> Sergi
-import {
-  HttpClient
-} from "./chunk-TJX6JMHG.js";
-import {
-  MatCommonModule
-} from "./chunk-DYQ37AOI.js";
-import {
-  DOCUMENT
-<<<<<<< HEAD
-} from "./chunk-MG2RVQ25.js";
->>>>>>> Sergi
-=======
-} from "./chunk-L72UBDQD.js";
->>>>>>> origin/Josep
->>>>>>> Sergi
+} from "./chunk-42MLWHQO.js";
 import {
   Attribute,
   ChangeDetectionStrategy,
@@ -53,20 +25,10 @@ import {
   Optional,
   SecurityContext,
   SkipSelf,
-  Subscription,
   ViewEncapsulation$1,
   booleanAttribute,
-  catchError,
-  finalize,
-  forkJoin,
   inject,
-  map,
-  of,
   setClassMetadata,
-  share,
-  take,
-  tap,
-  throwError,
   ɵɵInputTransformsFeature,
   ɵɵStandaloneFeature,
   ɵɵattribute,
@@ -81,20 +43,19 @@ import {
   ɵɵinjectAttribute,
   ɵɵprojection,
   ɵɵprojectionDef
-<<<<<<< HEAD
-<<<<<<< HEAD
-} from "./chunk-YW2W5TUJ.js";
-=======
-} from "./chunk-VT5A4BNA.js";
-import "./chunk-3EWR26GJ.js";
->>>>>>> Sergi
-=======
-} from "./chunk-VT5A4BNA.js";
-import "./chunk-3EWR26GJ.js";
-=======
-} from "./chunk-YW2W5TUJ.js";
->>>>>>> origin/Josep
->>>>>>> Sergi
+} from "./chunk-MUPCDZEB.js";
+import {
+  Subscription,
+  catchError,
+  finalize,
+  forkJoin,
+  map,
+  of,
+  share,
+  take,
+  tap,
+  throwError
+} from "./chunk-SXIXOCJ4.js";
 
 // node_modules/@angular/material/fesm2022/icon.mjs
 var _c0 = ["*"];

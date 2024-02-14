@@ -6,35 +6,16 @@ import {
   NoopAnimationDriver,
   WebAnimationsDriver,
   WebAnimationsStyleNormalizer
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Sergi
-} from "./chunk-JLRR7ZJY.js";
+} from "./chunk-KEV3GBXQ.js";
+import "./chunk-LIN5XROT.js";
 import {
   BrowserModule,
   DomRendererFactory2
-} from "./chunk-7VR2K72K.js";
-import "./chunk-UDJGKBKW.js";
-import "./chunk-UREEHHDU.js";
+} from "./chunk-S3675LEJ.js";
+import "./chunk-RMVRHTLM.js";
 import {
   DOCUMENT
-} from "./chunk-L72UBDQD.js";
-<<<<<<< HEAD
-=======
-} from "./chunk-LFGVIG6N.js";
-import {
-  BrowserModule,
-  DomRendererFactory2
-} from "./chunk-67ULLJPC.js";
-import "./chunk-TJX6JMHG.js";
-import "./chunk-LH4SUDXZ.js";
-import {
-  DOCUMENT
-} from "./chunk-MG2RVQ25.js";
->>>>>>> Sergi
-=======
->>>>>>> Sergi
+} from "./chunk-42MLWHQO.js";
 import {
   ANIMATION_MODULE_TYPE,
   ChangeDetectionScheduler,
@@ -49,16 +30,8 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-<<<<<<< HEAD
-<<<<<<< HEAD
-} from "./chunk-YW2W5TUJ.js";
-=======
-} from "./chunk-VT5A4BNA.js";
-import "./chunk-3EWR26GJ.js";
->>>>>>> Sergi
-=======
-} from "./chunk-YW2W5TUJ.js";
->>>>>>> Sergi
+} from "./chunk-MUPCDZEB.js";
+import "./chunk-SXIXOCJ4.js";
 
 // node_modules/@angular/platform-browser/fesm2022/animations.mjs
 var _InjectableAnimationEngine = class _InjectableAnimationEngine extends AnimationEngine {

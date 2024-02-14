@@ -35,36 +35,13 @@ import {
   provideProtractorTestingSupport,
   withHttpTransferCacheOptions,
   withNoHttpTransferCache
-<<<<<<< HEAD
-<<<<<<< HEAD
-} from "./chunk-7VR2K72K.js";
-import "./chunk-UDJGKBKW.js";
+} from "./chunk-S3675LEJ.js";
+import "./chunk-RMVRHTLM.js";
 import {
   getDOM
-} from "./chunk-L72UBDQD.js";
-import "./chunk-YW2W5TUJ.js";
-=======
-=======
->>>>>>> Sergi
-} from "./chunk-67ULLJPC.js";
-import "./chunk-TJX6JMHG.js";
-import {
-  getDOM
-} from "./chunk-MG2RVQ25.js";
-import "./chunk-VT5A4BNA.js";
-import "./chunk-3EWR26GJ.js";
-<<<<<<< HEAD
->>>>>>> Sergi
-=======
-=======
-} from "./chunk-7VR2K72K.js";
-import "./chunk-UDJGKBKW.js";
-import {
-  getDOM
-} from "./chunk-L72UBDQD.js";
-import "./chunk-YW2W5TUJ.js";
->>>>>>> origin/Josep
->>>>>>> Sergi
+} from "./chunk-42MLWHQO.js";
+import "./chunk-MUPCDZEB.js";
+import "./chunk-SXIXOCJ4.js";
 export {
   BrowserModule,
   By,
