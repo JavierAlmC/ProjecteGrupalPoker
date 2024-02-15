@@ -9,4 +9,8 @@ export interface ApiResponse {
   export interface Game {
     idGame: number;
     descripcion: string;
+    players?:number;
+  }
+  export interface Player {
+    players : number;
   }

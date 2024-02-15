@@ -11,6 +11,7 @@ import { BehaviorSubject, Observable, finalize } from 'rxjs';
 import { ApiResponse} from '../interfaces/game-table-model';
 import { URL_LOCAL_PROXY} from '../environment/environment';
 import { UserServicesService } from './user-services.service';
+import { Player } from '../interfaces/game-table-model';
 @Injectable({
   providedIn: 'root',
 })
@@ -39,6 +40,15 @@ export class TablePaginationService implements HttpInterceptor {
     });
     const url = `/api/v1/partidas?page=${currentPage}&size=${pageSize}&sort=idGame,asc`;
     return this.http.get<ApiResponse>(url,{ headers: headers, responseType: 'json' });
+  }
+  public getPlayers(id: Number): Observable<Player> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.userService.getToken()}`
+    });
+    const url = `/api/v1/partida/usrsInGame?idGame=${id}`;
+    return this.http.get<Player>(url,{ headers: headers, responseType: 'json' });
+
   }
 }
 export class InterceptorService implements HttpInterceptor {
