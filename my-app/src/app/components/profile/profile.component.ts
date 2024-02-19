@@ -5,7 +5,7 @@ import { UserServicesService } from '../../services/user-services.service';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ConfirmationDialogComponent } from '../confirm-dialog/confirm-dialog.component';
-import { EditDialogComponent } from '../edit-dialog/edit-dialog.component';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-profile',
@@ -18,9 +18,12 @@ export class ProfileComponent implements OnInit{
 
   description: any;
   NewInfo: any;
+  profileForm: FormGroup | any;
+
   constructor(
     public userServices: UserServicesService,
     private matDialog: MatDialog,
+    private fb: FormBuilder,
   ) {}
   ngOnInit(): void {
     
@@ -28,6 +31,17 @@ export class ProfileComponent implements OnInit{
       this.description = profile;
     });
       this.userServices.getProfile();
+
+
+      this.profileForm = this.fb.group({
+        nickname: [this.description.nickname, Validators.required],
+        nombre: [this.description.nombre, Validators.required],
+        email: [this.description.email, [Validators.required, Validators.email]],
+        saldo: [this.description.saldo, Validators.required],
+        password: [this.description.password, Validators.required],
+      });
+
+      this.profileForm.disable();
   }
 
   deleteAccount() {
@@ -52,30 +66,16 @@ export class ProfileComponent implements OnInit{
   
   }
   
-  modifieAccount() {
-    
-    const dialogReff = this.matDialog.open(EditDialogComponent, {
-      height: 'min-content',
-      width: 'max-content',
-      data: {
-        title: 'Modifie',
-        content: '',
-      },
-    });
-  
-    dialogReff.afterClosed().subscribe((result) => {
-      if (result) {
-        console.log("Entra");
+  saveChanges(): void {
+    if (this.profileForm.valid) {
+      this.description = this.profileForm.value;
 
-        this.NewInfo = result;
-      }else{
-        console.log("No entra");
+      this.profileForm.disable();
 
-      }
-    });
+      this.userServices.editProfile();
+    }
   }
   
-
 }
 
 export interface Profile {

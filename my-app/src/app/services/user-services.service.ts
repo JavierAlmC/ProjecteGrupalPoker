@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthData, NewUser } from '../interfaces/auth-data.model';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { URL_LOCAL_PROXY} from '../environment/environment';
 import { HttpHeaders } from '@angular/common/http';
 
@@ -120,4 +120,26 @@ export class UserServicesService {
       );
   }
   }
+
+  editProfile(){
+    const nickname = this.getNickname();
+    const token = this.getToken();
+  
+    if (nickname && token) {
+      const headers = new HttpHeaders({
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      });
+  
+      this.http.get("http://localhost:8090/auth/modificarUsuario/" + nickname, { headers: headers }).subscribe(
+        (resp: any) => {
+          return resp;
+        },
+        (error) => {
+          return error;
+        }
+      );
+    }
+  }
+
 }
