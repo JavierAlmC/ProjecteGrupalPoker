@@ -1,13 +1,16 @@
-export interface Games {
-    idGame : number;
-    descripcion : string;
-    //idPlayers : string[];
-    
-}
-export interface GameTable {
+export interface ApiResponse {
     totalItems: number;
-    data: Games[]; 
+    data: Game[];
     totalPages: number;
     pageSize: number;
     currentPage: number;
-}
+  }
+  
+  export interface Game {
+    idGame: number;
+    descripcion: string;
+    players?:number;
+  }
+  export interface Player {
+    players : number;
+  }
