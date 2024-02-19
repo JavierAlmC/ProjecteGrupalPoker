@@ -5,20 +5,20 @@ import { UserServicesService } from '../../services/user-services.service';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ConfirmationDialogComponent } from '../confirm-dialog/confirm-dialog.component';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-profile',
     standalone: true,
     templateUrl: './profile.component.html',
     styleUrl: './profile.component.css',
-    imports: [HeaderComponent, FooterComponent]
+    imports: [HeaderComponent, FooterComponent,ReactiveFormsModule]
 })
 export class ProfileComponent implements OnInit{
 
   description: any;
   NewInfo: any;
-  profileForm: FormGroup | any;
+  profileForm!: FormGroup;
 
   constructor(
     public userServices: UserServicesService,
@@ -26,22 +26,20 @@ export class ProfileComponent implements OnInit{
     private fb: FormBuilder,
   ) {}
   ngOnInit(): void {
-    
     this.userServices.profile$.subscribe(profile => {
       this.description = profile;
     });
-      this.userServices.getProfile();
-
-
-      this.profileForm = this.fb.group({
-        nickname: [this.description.nickname, Validators.required],
-        nombre: [this.description.nombre, Validators.required],
-        email: [this.description.email, [Validators.required, Validators.email]],
-        saldo: [this.description.saldo, Validators.required],
-        password: [this.description.password, Validators.required],
+    this.userServices.getProfile();
+  
+    this.profileForm = this.fb.group(
+      {
+        nombre: new FormControl('', [
+          Validators.required,
+          Validators.minLength(4),
+        ]),
+        email: new FormControl('', [Validators.required, Validators.email]),
+        
       });
-
-      this.profileForm.disable();
   }
 
   deleteAccount() {
@@ -58,7 +56,7 @@ export class ProfileComponent implements OnInit{
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         console.log("Eliminado");
-        //this.userServices.deleteProfile();
+        this.userServices.deleteProfile();
       }else{
         console.log("No eliminado");
       }
@@ -67,13 +65,19 @@ export class ProfileComponent implements OnInit{
   }
   
   saveChanges(): void {
-    if (this.profileForm.valid) {
-      this.description = this.profileForm.value;
+  
 
-      this.profileForm.disable();
+  const nombre = this.profileForm.value.nombre;
+  const email = this.profileForm.value.email;
 
-      this.userServices.editProfile();
-    }
+  const updatedProfile = {
+    nombre: nombre,
+    email: email,
+  };
+  
+  console.log(updatedProfile);
+  this.userServices.editProfile(updatedProfile);
+    
   }
   
 }
