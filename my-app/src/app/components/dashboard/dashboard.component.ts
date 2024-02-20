@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserServicesService } from '../../services/user-services.service';
 import { GameServicesService } from '../../services/game-services.service';
 
@@ -9,8 +9,22 @@ import { GameServicesService } from '../../services/game-services.service';
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
-export class DashboardComponent {
-  money: number = 10000;
+export class DashboardComponent implements OnInit {
+  description: any;
+  money: number = 0; 
+
+  ngOnInit(): void {
+    this.userService.getProfile();
+    this.userService.profile$.subscribe((profile) => {
+      console.log(profile);
+      console.log("Este es el perfil "+profile);
+      this.description = profile;
+      this.money = this.description.saldo;
+      
+    });
+    
+  }
+
   initial_money: number = 1000;
   total_bet = 32000;
   constructor(public userService :UserServicesService,public gameService: GameServicesService) {
@@ -19,7 +33,7 @@ export class DashboardComponent {
   
 
   calcularRendimiento(): number {
-    return ((this.money - this.initial_money) / this.initial_money) * 100;
+    return ((this.description.saldo - this.initial_money) / this.initial_money) * 100;
   }
   createGame(){
     this.userService.getUserId().subscribe((data)=>{
