@@ -38,19 +38,33 @@ export class TablePaginationService implements HttpInterceptor {
       'Authorization': `Bearer ${this.userService.getToken()}`,
 
     });
-    const url = `/api/v1/partidas?page=${currentPage}&size=${pageSize}&sort=idGame,asc`;
+    const url = `/api/v1/games?page=${currentPage}&size=${pageSize}&sort=idState,asc`;
     return this.http.get<ApiResponse>(url,{ headers: headers, responseType: 'json' });
   }
+ 
+  
   public getPlayers(id: Number): Observable<Player> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.userService.getToken()}`
     });
-    const url = `/api/v1/partida/usrsInGame?idGame=${id}`;
+    const url = `/api/v1/game/${id}/usrsInGame`;
     return this.http.get<Player>(url,{ headers: headers, responseType: 'json' });
 
   }
+  public joinGame(idState: number, idUser : number):Observable<any>{
+  
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.userService.getToken()}`
+    });
+    const url = `/api/v1/joinGame/${idUser}/${idState}`;
+    return this.http.get<Player>(url,{ headers: headers, responseType: 'json' });
+  
+  
+  }
 }
+
 export class InterceptorService implements HttpInterceptor {
   constructor(public paginationService: TablePaginationService) {}
   intercept(

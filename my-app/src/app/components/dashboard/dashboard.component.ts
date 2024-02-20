@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { MatchesService } from '../../services/matches.service';
+import { Component } from '@angular/core';
 import { UserServicesService } from '../../services/user-services.service';
+import { GameServicesService } from '../../services/game-services.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -24,13 +24,26 @@ export class DashboardComponent implements OnInit {
   }
 
   initial_money: number = 1000;
-  total_bet = 0;
+  total_bet = 32000;
+  constructor(public userService :UserServicesService,public gameService: GameServicesService) {
 
-  constructor(private matchesService: MatchesService, private userServicesService: UserServicesService) {
-  
   }
 
   calcularRendimiento(): number {
     return ((this.description.saldo - this.initial_money) / this.initial_money) * 100;
+  }
+  createGame(){
+    this.userService.getUserId().subscribe((data)=>{
+      if(data.gameStateDb !== null || data.idCreatedGame !== null){
+        
+      }else{
+        //si algun dels dos es null, crea
+        this.gameService.newGame(data.id).subscribe((data)=>{
+          console.log(data)
+        })
+
+      }
+    })
+  
   }
 }
