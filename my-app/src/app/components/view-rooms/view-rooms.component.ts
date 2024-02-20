@@ -68,7 +68,15 @@ export class ViewRoomsComponent {
   }
   */
   join(idState: number) {
-    this.userService.getUserId().subscribe((id) => {
+    
+    this.userService.getUserId().subscribe((infoUser) => {
+      console.log(infoUser)
+      console.log(isNaN(
+        infoUser.id
+      ))
+      this.gamesService.joinGame(idState, infoUser.id).subscribe((data) => {
+        console.log(data)
+      })
       
     })
     /*

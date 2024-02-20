@@ -53,13 +53,15 @@ export class TablePaginationService implements HttpInterceptor {
 
   }
   public joinGame(idState: number, idUser : number):Observable<any>{
+    console.log(this.userService.getToken());
   
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.userService.getToken()}`
     });
     const url = `/api/v1/joinGame/${idUser}/${idState}`;
-    return this.http.get<Player>(url,{ headers: headers, responseType: 'json' });
+    console.log(url);
+    return this.http.put<Player>(url,{ headers: headers, responseType: 'json' });
   
   
   }
