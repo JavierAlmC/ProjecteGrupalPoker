@@ -7,8 +7,8 @@ export interface ApiResponse {
   }
   
   export interface Game {
-    idGame: number;
-    descripcion: string;
+    idState: number;
+    gameStateName: string;
     players?:number;
   }
   export interface Player {

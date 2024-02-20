@@ -3,16 +3,17 @@ import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from "../footer/footer.component";
 import { UserServicesService } from '../../services/user-services.service';
 import { MatDialog } from '@angular/material/dialog';
+import { MatCard } from '@angular/material/card';
 import { Router } from '@angular/router';
 import { ConfirmationDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import { MatButtonModule } from '@angular/material/button';
 @Component({
     selector: 'app-profile',
     standalone: true,
     templateUrl: './profile.component.html',
     styleUrl: './profile.component.css',
-    imports: [HeaderComponent, FooterComponent,ReactiveFormsModule]
+    imports: [HeaderComponent, FooterComponent,ReactiveFormsModule,MatCard,MatButtonModule]
 })
 export class ProfileComponent implements OnInit{
 
@@ -27,6 +28,7 @@ export class ProfileComponent implements OnInit{
   ) {}
   ngOnInit(): void {
     this.userServices.profile$.subscribe(profile => {
+      console.log(profile);
       this.description = profile;
     });
     this.userServices.getProfile();

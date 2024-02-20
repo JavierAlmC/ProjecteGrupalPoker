@@ -7,6 +7,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { TablePaginationService } from '../../services/table-pagination.service';
 import { Game } from '../../interfaces/game-table-model';
 import { Observable, forkJoin, map } from 'rxjs';
+import { UserServicesService } from '../../services/user-services.service';
 
 @Component({
   selector: 'app-view-rooms',
@@ -30,7 +31,7 @@ export class ViewRoomsComponent {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   dataSource = new MatTableDataSource<Game>();
 
-  constructor(public gamesService: TablePaginationService) {}
+  constructor(public gamesService: TablePaginationService, public userService : UserServicesService) {}
 
   fetchTableData(currentPage: number, pageSize: number) {
     this.gamesService.getGames(currentPage, pageSize).subscribe((gamesData) => {
@@ -39,7 +40,7 @@ export class ViewRoomsComponent {
       this.gamesData = gamesData.data;
       console.log(this.gamesData)
       this.gamesData.map((game, index) => {
-        this.idGame = game.idGame;
+        this.idGame = game.idState;
         this.gamesService.getPlayers(this.idGame).subscribe((players) => {
           this.gamesData[index].players = players.players;
           console.log(this.gamesData[index])
@@ -66,7 +67,12 @@ export class ViewRoomsComponent {
     this.dataSource.paginator = this.paginator;
   }
   */
-  join(id: string) {
-    console.log(id);
+  join(idState: number) {
+    this.userService.getUserId().subscribe((id) => {
+      
+    })
+    /*
+  this.gamesService.joinGame(idState,this.userService.)
+  */
   }
 }
