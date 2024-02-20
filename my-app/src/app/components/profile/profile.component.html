@@ -1,2 +1,40 @@
 <app-header></app-header>
-<p>profile works!</p>
+
+<form [formGroup]="profileForm">
+  <div class="profile-container">
+    <div class="profile-info">
+      <div class="info-item">
+        <span>Nickname:</span>
+        <label>{{description.nickname}}</label>
+      </div>
+      <div class="info-item">
+        <span>Nombre:</span>
+        <label>{{description.nombre}}</label>
+        <input formControlName="nombre" />
+      </div>
+      <div class="info-item">
+        <span>Email:</span>
+        <label>{{description.email}}</label>
+        <input formControlName="email" />
+      </div>
+      <div class="info-item">
+        <span>Saldo:</span>
+        <label>{{description.saldo}}</label>
+      </div>
+      <div class="info-item">
+        <span>Password:</span>
+        <label>{{description.password}}</label>
+      </div>
+    </div>
+  </div>
+</form>
+
+  <div class="modifie-account-bn">
+    <button mat-raised-button color="warn" (click)="saveChanges()">Save changes</button>
+  </div>
+  <br>
+  <div class="delete-account-btn">
+    <button mat-raised-button color="warn" (click)="deleteAccount()">Delete Account</button>
+  </div>
+
+<app-footer></app-footer>
