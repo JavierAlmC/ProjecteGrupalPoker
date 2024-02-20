@@ -56,6 +56,15 @@ export class UserServicesService {
     const expirationDate = new Date(Date.now() + 86400 * 1000).toUTCString();
     document.cookie = `nickname=${nickname}; Expires=${expirationDate}; SameSite=Strict;`;
   }
+  getUserId(){
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.getToken()}`
+    });
+    const url = `/api/v1/infoPerfil/${this.getNickname()}`;
+    return this.http.get<any>(url,{ headers: headers, responseType: 'json' });
+
+  }
   getNickname() {
     const nickname = document.cookie
       .split('; ')
@@ -88,7 +97,7 @@ export class UserServicesService {
         'Content-Type': 'application/json',
       });
   
-      this.http.get("http://localhost:8090/api/v1/infoPerfil/" +nickname, { headers: headers }).subscribe(
+      this.http.get(`/api/v1/infoPerfil/${nickname}`, { headers: headers }).subscribe(
         (resp: any) => {
           return this.profileSubject.next(resp);
         },
@@ -117,6 +126,7 @@ export class UserServicesService {
           return error;
         }
       );
+      
   }
   }
 

@@ -1,5 +1,5 @@
 <app-header></app-header>
-
+<mat-card class="profile-card">
 <form [formGroup]="profileForm">
   <div class="profile-container">
     <div class="profile-info">
@@ -21,10 +21,6 @@
         <span>Saldo:</span>
         <label>{{description.saldo}}</label>
       </div>
-      <div class="info-item">
-        <span>Password:</span>
-        <label>{{description.password}}</label>
-      </div>
     </div>
   </div>
 </form>
@@ -36,5 +32,6 @@
   <div class="delete-account-btn">
     <button mat-raised-button color="warn" (click)="deleteAccount()">Delete Account</button>
   </div>
+</mat-card>
 
 <app-footer></app-footer>
