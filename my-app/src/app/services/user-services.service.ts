@@ -55,6 +55,15 @@ export class UserServicesService {
     const expirationDate = new Date(Date.now() + 86400 * 1000).toUTCString();
     document.cookie = `nickname=${nickname}; Expires=${expirationDate}; SameSite=Strict;`;
   }
+  getUserId(){
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.getToken()}`
+    });
+    const url = `/api/v1/infoPerfil/${this.getNickname()}`;
+    return this.http.get<any>(url,{ headers: headers, responseType: 'json' });
+
+  }
   getNickname() {
     const nickname = document.cookie
       .split('; ')

@@ -37,6 +37,7 @@ export class ViewRoomsComponent {
       console.log(gamesData);
       this.totalData = gamesData.totalItems;
       this.gamesData = gamesData.data;
+      console.log(this.gamesData)
       this.gamesData.map((game, index) => {
         this.idGame = game.idGame;
         this.gamesService.getPlayers(this.idGame).subscribe((players) => {
@@ -53,8 +54,11 @@ export class ViewRoomsComponent {
     });
 
     this.dataSource.paginator = this.paginator;
-
-    this.fetchTableData(this.paginator.pageIndex, this.paginator.pageSize);
+    this.dataSource.paginator = this.paginator;
+    setInterval(() => {
+      this.fetchTableData(this.paginator.pageIndex, this.paginator.pageSize);
+    }, 2000);
+   
   }
   /*
   ngOnInit(): void {
