@@ -16,6 +16,7 @@ export class DashboardComponent {
   constructor(public userService :UserServicesService,public gameService: GameServicesService) {
 
   }
+  
 
   calcularRendimiento(): number {
     return ((this.money - this.initial_money) / this.initial_money) * 100;
