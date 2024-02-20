@@ -150,5 +150,27 @@ export class UserServicesService {
       );
     }
   }
+  
+  getOrderBySalario(){
+    const nickname = this.getNickname();
+    const token = this.getToken();
+  
+    if (nickname && token) {
+      const headers = new HttpHeaders({
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      });
+  
+      this.http.get(`/api/v1/ordenadosPorSaldo`, { headers: headers }).subscribe(
+        (resp: any) => {
+          console.log("RRR"+resp);
+          return resp;
+        },
+        (error) => {
+          return error;
+        }
+      );
+  }
+  }
 
 }

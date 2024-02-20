@@ -1,4 +1,5 @@
 import { Component, OnInit,HostListener } from '@angular/core';
+import { UserServicesService } from '../../services/user-services.service';
 
 @Component({
   selector: 'app-stats',
@@ -8,6 +9,9 @@ import { Component, OnInit,HostListener } from '@angular/core';
   styleUrls: ['./stats.component.css']  
 })
 export class StatsComponent implements OnInit {
+  
+  constructor( public userService: UserServicesService){}
+
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     const statsDiv = document.getElementById('stats');
@@ -26,8 +30,10 @@ export class StatsComponent implements OnInit {
   ];
 
   ngOnInit(): void {
+    this.userService.getOrderBySalario();
     this.createBar(this.dataTable);
   }
+
 
   createBar(dataTable: any[]): void {
     const statsDiv = document.getElementById('stats');
