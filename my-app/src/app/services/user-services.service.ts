@@ -88,7 +88,7 @@ export class UserServicesService {
         'Content-Type': 'application/json',
       });
   
-      this.http.get("http://localhost:8090/auth/infoPerfil/" + nickname, { headers: headers }).subscribe(
+      this.http.get(`api/v1/infoPerfil/${nickname}`, { headers: headers }).subscribe(
         (resp: any) => {
           console.log(resp)
           return this.profileSubject.next(resp);
@@ -118,6 +118,7 @@ export class UserServicesService {
           return error;
         }
       );
+      
   }
   }
 
