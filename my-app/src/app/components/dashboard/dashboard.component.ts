@@ -30,6 +30,7 @@ export class DashboardComponent implements OnInit {
   constructor(public userService :UserServicesService,public gameService: GameServicesService) {
 
   }
+  
 
   calcularRendimiento(): number {
     return ((this.description.saldo - this.initial_money) / this.initial_money) * 100;
