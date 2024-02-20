@@ -98,6 +98,7 @@ export class LoginComponent implements OnInit {
           this.userServices.setToken(response.token);
           console.log(this.userServices.getToken());
           this.userServices.setNickname(response.nickname);
+          
           console.log(this.userServices.getNickname());
           this.router.navigate(['rooms']);
         },

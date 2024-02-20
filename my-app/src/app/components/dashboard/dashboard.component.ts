@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserServicesService } from '../../services/user-services.service';
 import { GameServicesService } from '../../services/game-services.service';
 
@@ -12,9 +12,11 @@ import { GameServicesService } from '../../services/game-services.service';
 export class DashboardComponent implements OnInit {
   description: any;
   money: number = 0; 
+
   ngOnInit(): void {
-    
-    this.userServicesService.profile$.subscribe(profile => {
+    this.userService.getProfile();
+    this.userService.profile$.subscribe((profile) => {
+      console.log(profile);
       console.log("Este es el perfil "+profile);
       this.description = profile;
       this.money = this.description.saldo;
