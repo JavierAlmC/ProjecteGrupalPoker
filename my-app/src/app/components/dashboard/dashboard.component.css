@@ -1,7 +1,6 @@
 .create_game{
     height: 100px;   
     width: 18vw;
-    background-color: red;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
