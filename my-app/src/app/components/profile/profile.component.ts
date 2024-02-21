@@ -28,11 +28,11 @@ export class ProfileComponent implements OnInit{
   ) {}
   ngOnInit(): void {
     this.userServices.profile$.subscribe(profile => {
-      console.log(profile);
       this.description = profile;
     });
     console.log("DESCRIPCION"+this.description);
     this.userServices.getProfile();
+   
   
     this.profileForm = this.fb.group(
       {
@@ -66,7 +66,6 @@ export class ProfileComponent implements OnInit{
     });
   
   }
-  
   saveChanges(): void {
   
 
@@ -89,5 +88,5 @@ export interface Profile {
   nickname: string;
   nombre: string;
   email: string;
-  balance: number; 
+  saldo: number; 
 }

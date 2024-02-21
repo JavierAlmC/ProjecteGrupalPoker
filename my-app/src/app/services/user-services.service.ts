@@ -56,7 +56,7 @@ export class UserServicesService {
     const expirationDate = new Date(Date.now() + 86400 * 1000).toUTCString();
     document.cookie = `nickname=${nickname}; Expires=${expirationDate}; SameSite=Strict;`;
   }
-  getUserId(){
+  getUserId():Observable<any>{
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.getToken()}`
@@ -158,6 +158,7 @@ export class UserServicesService {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',
         });
+
 
         return this.http.get(`/api/v1/ordenadosPorSaldo`, { headers: headers }).pipe(
             map((resp: any) => {

@@ -21,12 +21,6 @@ export class StatsComponent implements OnInit {
   }
 
   private dataTable = [
-    ['nickname', 'dinero'],
-    ['Juan', 900],
-    ['Pepe', 700],
-    ['Luis', 500],
-    ['Ana', 250],
-    ['Maria', 150]
   ];
   
   

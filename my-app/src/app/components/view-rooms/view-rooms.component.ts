@@ -1,3 +1,4 @@
+
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatButton } from '@angular/material/button';
@@ -49,7 +50,7 @@ export class ViewRoomsComponent {
       this.dataSource = new MatTableDataSource(this.gamesData);
     });
   }
-  ngAfterViewInit() {
+  ngOnInit() {
     this.gamesService.isLoading.subscribe((isLoading) => {
       this.isLoading = isLoading;
     });
@@ -68,7 +69,16 @@ export class ViewRoomsComponent {
   }
   */
   join(idState: number) {
-    this.userService.getUserId().subscribe((id) => {
+    
+    this.userService.getUserId().subscribe((infoUser) => {
+      console.log(infoUser)
+      console.log(isNaN(
+        infoUser.id
+      ))
+      this.gamesService.joinGame(idState, infoUser.id).subscribe((data) => {
+        console.log(data)
+      })
+      
       
     })
     /*
@@ -76,3 +86,9 @@ export class ViewRoomsComponent {
   */
   }
 }
+
+
+
+
+
+

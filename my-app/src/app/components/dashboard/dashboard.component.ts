@@ -37,6 +37,7 @@ export class DashboardComponent implements OnInit {
   }
   createGame(){
     this.userService.getUserId().subscribe((data)=>{
+      console.log(data)
       if(data.gameStateDb !== null || data.idCreatedGame !== null){
         
       }else{
