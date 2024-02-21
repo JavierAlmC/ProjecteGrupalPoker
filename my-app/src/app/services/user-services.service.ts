@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthData, NewUser } from '../interfaces/auth-data.model';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, catchError, map, of } from 'rxjs';
 import { URL_LOCAL_PROXY} from '../environment/environment';
 import { HttpHeaders } from '@angular/common/http';
 
@@ -150,27 +150,26 @@ export class UserServicesService {
       );
     }
   }
-  
-  getOrderBySalario(){
+  getOrderBySalario(): Observable<any[]> {
     const nickname = this.getNickname();
     const token = this.getToken();
-  
     if (nickname && token) {
-      const headers = new HttpHeaders({
-        'Authorization': `Bearer ${token}`,
-        'Content-Type': 'application/json',
-      });
-  
-      this.http.get(`/api/v1/ordenadosPorSaldo`, { headers: headers }).subscribe(
-        (resp: any) => {
-          console.log("RRR"+resp);
-          return resp;
-        },
-        (error) => {
-          return error;
-        }
-      );
-  }
+        const headers = new HttpHeaders({
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json',
+        });
+
+        return this.http.get(`/api/v1/ordenadosPorSaldo`, { headers: headers }).pipe(
+            map((resp: any) => {
+                return resp.map((user: { nickname: any; saldo: any; }) => [user.nickname, user.saldo]);
+            }),
+            catchError((error) => {
+                console.error(error);
+                return [];
+            })
+        );
+    }
+    return of([]); 
   }
 
 }

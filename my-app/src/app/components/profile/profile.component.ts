@@ -31,6 +31,7 @@ export class ProfileComponent implements OnInit{
       console.log(profile);
       this.description = profile;
     });
+    console.log("DESCRIPCION"+this.description);
     this.userServices.getProfile();
   
     this.profileForm = this.fb.group(

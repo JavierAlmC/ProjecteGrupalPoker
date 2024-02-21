@@ -28,19 +28,29 @@ export class StatsComponent implements OnInit {
     ['Ana', 250],
     ['Maria', 150]
   ];
-
+  
+  
   ngOnInit(): void {
-    this.userService.getOrderBySalario();
-    this.createBar(this.dataTable);
+    this.userService.getOrderBySalario().subscribe(
+      (dataTable) => {
+          let table = dataTable;
+          console.log(table);
+          this.createBar(table);
+      },
+      (error) => {
+          console.error(error);
+      }
+  );
   }
 
 
-  createBar(dataTable: any[]): void {
+  createBar(dataTable: any): void {
+
     const statsDiv = document.getElementById('stats');
     if (statsDiv) {
       const maxWidth = statsDiv.offsetWidth * 0.8;
-      const maxDinero = Math.max(...dataTable.slice(1).map((row: any[]) => row[1])); 
-      dataTable.slice(1).forEach((row: any[]) => {
+      const maxDinero = Math.max(...dataTable.slice(0).map((row: any[]) => row[1])); 
+      dataTable.forEach((row: any[]) => {
         const nombre = row[0];
         const dinero = row[1];
         const barWidth = ((dinero / maxDinero) * maxWidth);
@@ -53,7 +63,7 @@ export class StatsComponent implements OnInit {
         barDiv.style.padding = '10px';
         barDiv.style.color = 'white';
         statsDiv.appendChild(barDiv);
-      });
+    });
     }
   }
 }
