@@ -88,6 +88,7 @@ export class LoginComponent implements OnInit {
 
     if (nickname && password) {
       const user = { nickname: nickname, password: password };
+      console.log(user)
       this.userServices.loginUser(user.nickname, user.password).subscribe({
         next: (response) => {
           console.log(response)
@@ -98,11 +99,20 @@ export class LoginComponent implements OnInit {
           this.userServices.setToken(response.token);
           console.log(this.userServices.getToken());
           this.userServices.setNickname(response.nickname);
-          
+          this.userServices.getProfile().subscribe({
+            next: (response) => {
+              console.log("Received response:", response);
+              // Aquí puedes trabajar con los datos recibidos si es necesario
+            },
+            error: (error) => {
+              console.log("Error occurred:", error);
+            }
+          });   
           console.log(this.userServices.getNickname());
           this.router.navigate(['rooms']);
         },
         error: (error) => {
+          console.log(error)
           this.toastr.error('Login failed', 'Error', {
             easing: 'ease-out',
             timeOut: 2000,

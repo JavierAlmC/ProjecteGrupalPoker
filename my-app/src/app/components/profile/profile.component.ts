@@ -27,7 +27,7 @@ export class ProfileComponent implements OnInit{
     private fb: FormBuilder,
   ) {}
   ngOnInit(): void {
-    this.userServices.profile$.subscribe(profile => {
+    this.userServices.getProfile().subscribe(profile => {
       console.log(profile);
       this.description = profile;
     });

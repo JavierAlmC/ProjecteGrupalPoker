@@ -83,51 +83,26 @@ export class UserServicesService {
       'nickname=; Expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Strict;';
   }
 
-
+/*
   private profileSubject = new BehaviorSubject<any>(null);
   profile$ = this.profileSubject.asObservable();
+  */
 
-  getProfile(){
-    const nickname = this.getNickname();
-    const token = this.getToken();
-  
-    if (nickname && token) {
-      const headers = new HttpHeaders({
-        'Authorization': `Bearer ${token}`,
-        'Content-Type': 'application/json',
-      });
-  
-      this.http.get(`/api/v1/infoPerfil/${nickname}`, { headers: headers }).subscribe(
-        (resp: any) => {
-          return this.profileSubject.next(resp);
-        },
-        (error) => {
-          return error;
-        }
-      );
-  }
+  getProfile(): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.getToken()}`
+    });
+    const url = `/api/v1/infoPerfil/${this.getNickname()}`;
+    return this.http.get<any>(url,{ headers: headers, responseType: 'json' });
   }
 
-  deleteProfile(){
-    const nickname = this.getNickname();
-    const token = this.getToken();
-  
-    if (nickname && token) {
+  deleteProfile():Observable<any>{
       const headers = new HttpHeaders({
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${this.getToken()}`,
         'Content-Type': 'application/json',
-      });
-  
-      this.http.get("http://localhost:8090/api/v1/eliminarUsuario/" + nickname, { headers: headers }).subscribe(
-        (resp: any) => {
-          return resp;
-        },
-        (error) => {
-          return error;
-        }
-      );
-      
-  }
+  });
+     return this.http.delete<any>(`/api/v1/eliminarUsuario/${this.getNickname()}`, { headers: headers,responseType: 'json' });
   }
 
   editProfile(updatedProfile: any): void {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServicesService } from '../../services/user-services.service';
 import { GameServicesService } from '../../services/game-services.service';
+import { compileInjectable } from '@angular/compiler';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,24 +10,27 @@ import { GameServicesService } from '../../services/game-services.service';
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
-export class DashboardComponent implements OnInit {
-  description: any;
+export class DashboardComponent {
+  description: any = {};
   money: number = 0; 
-
-  ngOnInit(): void {
-    this.userService.getProfile();
-    this.userService.profile$.subscribe((profile) => {
-      console.log(profile);
-      console.log("Este es el perfil "+profile);
-      this.description = profile;
-      this.money = this.description.saldo;
-      
-    });
-    
-  }
-
   initial_money: number = 1000;
   total_bet = 32000;
+  profile:any = {};
+
+  ngAfterViewInit() {
+    console.log("Enters ngOnInit");
+    this.userService.getUserId().subscribe((data)=>{
+      console.log(data);
+        console.log("Received profile response:", data);
+        this.profile = data;
+        this.description = data;
+        this.money = this.description.saldo;
+      
+    });
+  }
+  
+
+  
   constructor(public userService :UserServicesService,public gameService: GameServicesService) {
 
   }

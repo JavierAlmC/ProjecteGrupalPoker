@@ -49,7 +49,7 @@ export class ViewRoomsComponent {
       this.dataSource = new MatTableDataSource(this.gamesData);
     });
   }
-  ngAfterViewInit() {
+  ngOnInit() {
     this.gamesService.isLoading.subscribe((isLoading) => {
       this.isLoading = isLoading;
     });
