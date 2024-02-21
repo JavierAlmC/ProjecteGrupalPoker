@@ -13,8 +13,8 @@ export class MatchesService {
 
   public getUserMoney(nickname:string): Observable<number> {
     const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.userService.getToken()}`,
+      'Content-Type': 'application/json',
     });
     const url = `/api/v1/${this.userService.getNickname()}`;
     return this.http.get<number>(url, { headers: headers, responseType: 'json' });

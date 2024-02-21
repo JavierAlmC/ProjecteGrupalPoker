@@ -9,6 +9,8 @@ import { TablePaginationService } from '../../services/table-pagination.service'
 import { Game } from '../../interfaces/game-table-model';
 import { Observable, forkJoin, map } from 'rxjs';
 import { UserServicesService } from '../../services/user-services.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-view-rooms',
@@ -32,7 +34,9 @@ export class ViewRoomsComponent {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   dataSource = new MatTableDataSource<Game>();
 
-  constructor(public gamesService: TablePaginationService, public userService : UserServicesService) {}
+  constructor(public gamesService: TablePaginationService, public userService : UserServicesService,     
+    private router: Router,
+    ) {}
 
   fetchTableData(currentPage: number, pageSize: number) {
     this.gamesService.getGames(currentPage, pageSize).subscribe((gamesData) => {
@@ -77,14 +81,16 @@ export class ViewRoomsComponent {
       ))
       this.gamesService.joinGame(idState, infoUser.id).subscribe((data) => {
         console.log(data)
+          
       })
-      
       
     })
     /*
   this.gamesService.joinGame(idState,this.userService.)
   */
+  this.router.navigate(['board']);    
   }
+  
 }
 
 
