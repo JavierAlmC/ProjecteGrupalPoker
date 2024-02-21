@@ -172,4 +172,27 @@ export class UserServicesService {
     return of([]); 
   }
 
+  getState(id: any): Observable<any[]> {
+    const nickname = this.getNickname();
+    const token = this.getToken();
+    if (nickname && token) {
+        const headers = new HttpHeaders({
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json',
+        });
+
+        return this.http.get(`/api/v1/game/${id}`, { headers: headers }).pipe(
+            (resp: any) => {
+              console.log(resp);
+                return resp;
+            },
+            catchError((error) => {
+                console.error(error);
+                return [];
+            })
+        );
+    }
+    return of([]); 
+  }
+
 }

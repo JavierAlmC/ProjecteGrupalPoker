@@ -70,6 +70,7 @@ export class ViewRoomsComponent {
   join(idState: number) {
     this.userService.getUserId().subscribe((id) => {
       
+      
     })
     /*
   this.gamesService.joinGame(idState,this.userService.)
