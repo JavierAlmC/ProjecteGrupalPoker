@@ -16,31 +16,42 @@ export class StatsComponent implements OnInit {
   onResize(event: any) {
     const statsDiv = document.getElementById('stats');
     statsDiv!.innerHTML='';
-    this.createBar(this.dataTable);
-    
+    this.userService.getOrderBySalario().subscribe(
+      (dataTable) => {
+          let table = dataTable;
+          console.log(table);
+          this.createBar(table);
+      },
+      (error) => {
+          console.error(error);
+      }
+  );    
   }
 
-  private dataTable = [
-    ['nickname', 'dinero'],
-    ['Juan', 900],
-    ['Pepe', 700],
-    ['Luis', 500],
-    ['Ana', 250],
-    ['Maria', 150]
-  ];
-
+  
   ngOnInit(): void {
-    this.userService.getOrderBySalario();
-    this.createBar(this.dataTable);
+    this.userService.getOrderBySalario().subscribe(
+      (dataTable) => {
+          let table = dataTable;
+          console.log(table);
+          this.createBar(table);
+      },
+      (error) => {
+          console.error(error);
+      }
+  );
   }
 
 
-  createBar(dataTable: any[]): void {
+  createBar(dataTable: any): void {
+
     const statsDiv = document.getElementById('stats');
     if (statsDiv) {
+      statsDiv.innerHTML = '';
+
       const maxWidth = statsDiv.offsetWidth * 0.8;
-      const maxDinero = Math.max(...dataTable.slice(1).map((row: any[]) => row[1])); 
-      dataTable.slice(1).forEach((row: any[]) => {
+      const maxDinero = Math.max(...dataTable.slice(0).map((row: any[]) => row[1])); 
+      dataTable.forEach((row: any[]) => {
         const nombre = row[0];
         const dinero = row[1];
         const barWidth = ((dinero / maxDinero) * maxWidth);
@@ -53,7 +64,7 @@ export class StatsComponent implements OnInit {
         barDiv.style.padding = '10px';
         barDiv.style.color = 'white';
         statsDiv.appendChild(barDiv);
-      });
+    });
     }
   }
 }

@@ -78,6 +78,7 @@ export class ViewRoomsComponent {
         console.log(data)
       })
       
+      
     })
     /*
   this.gamesService.joinGame(idState,this.userService.)
