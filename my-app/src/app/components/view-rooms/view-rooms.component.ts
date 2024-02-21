@@ -1,3 +1,4 @@
+
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatButton } from '@angular/material/button';
@@ -8,6 +9,8 @@ import { TablePaginationService } from '../../services/table-pagination.service'
 import { Game } from '../../interfaces/game-table-model';
 import { Observable, forkJoin, map } from 'rxjs';
 import { UserServicesService } from '../../services/user-services.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-view-rooms',
@@ -31,7 +34,9 @@ export class ViewRoomsComponent {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   dataSource = new MatTableDataSource<Game>();
 
-  constructor(public gamesService: TablePaginationService, public userService : UserServicesService) {}
+  constructor(public gamesService: TablePaginationService, public userService : UserServicesService,     
+    private router: Router,
+    ) {}
 
   fetchTableData(currentPage: number, pageSize: number) {
     this.gamesService.getGames(currentPage, pageSize).subscribe((gamesData) => {
@@ -49,7 +54,7 @@ export class ViewRoomsComponent {
       this.dataSource = new MatTableDataSource(this.gamesData);
     });
   }
-  ngAfterViewInit() {
+  ngOnInit() {
     this.gamesService.isLoading.subscribe((isLoading) => {
       this.isLoading = isLoading;
     });
@@ -68,11 +73,28 @@ export class ViewRoomsComponent {
   }
   */
   join(idState: number) {
-    this.userService.getUserId().subscribe((id) => {
+    
+    this.userService.getUserId().subscribe((infoUser) => {
+      console.log(infoUser)
+      console.log(isNaN(
+        infoUser.id
+      ))
+      this.gamesService.joinGame(idState, infoUser.id).subscribe((data) => {
+        console.log(data)
+          
+      })
       
     })
     /*
   this.gamesService.joinGame(idState,this.userService.)
   */
+  this.router.navigate(['board']);    
   }
+  
 }
+
+
+
+
+
+

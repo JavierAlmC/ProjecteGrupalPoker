@@ -1,27 +1,56 @@
+.profile-card {
+  width: 60%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .profile-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    
-  }
-  
-  .profile-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-  }
-  
-  .info-item {
-    margin-bottom: 10px;
-  }
-  
-  span {
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  .delete-account-btn,.modifie-account-bn {
-    text-align: center;
-  }
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info-item span {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.modifie-account-bn,
+.delete-account-btn {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin-top: 10px;
+}
+
+label{
+  color: white;
+}
+
+.input1{
+  margin-left: 39%;
+}
+
+.input2{
+  margin-left: 20%;
+}
