@@ -1,3 +1,4 @@
+<div class="register">
 <mat-card class="card">
   <mat-card-header class="title">Register</mat-card-header>
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form">
@@ -74,7 +75,7 @@
     </mat-form-field>
 
     <mat-form-field class="field">
-      <mat-label class="row">Password</mat-label>
+      <mat-label>Password</mat-label>
       <input
         matInput
         type="password"
@@ -102,7 +103,7 @@
     </mat-form-field>
 
     <mat-form-field class="field">
-      <mat-label class="row">Confirm password</mat-label>
+      <mat-label>Confirm password</mat-label>
       <input
         matInput
         type="confirmPassword"
@@ -140,3 +141,4 @@
     </button>
   </form>
 </mat-card>
+</div>

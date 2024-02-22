@@ -1,1 +1,2 @@
-export const URL_SPRING = 'http://localhost:8090/';
+
+export const URL_LOCAL_PROXY = 'http://localhost:4200';

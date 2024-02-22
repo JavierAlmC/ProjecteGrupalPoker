@@ -1,0 +1,38 @@
+<app-header></app-header>
+<mat-card class="profile-card">
+<form [formGroup]="profileForm">
+  <div class="profile-container">
+    <div class="profile-info">
+      <div class="info-item">
+        <span>Nickname:</span>
+        <label>{{description.nickname}}</label>
+      </div>
+      <div class="info-item">
+        <span>Nombre:</span>
+        <label>{{description.nombre}}</label>
+        <input class="input1" formControlName="nombre" />
+      </div>
+      <div class="info-item">
+        <span>Email:</span>
+        <label>{{description.email}}</label>
+        <input class="input2" formControlName="email" />
+      </div>
+      <div class="info-item">
+        <span>Saldo:</span>
+        <label>{{description.saldo}}</label>
+      </div>
+  
+    </div>
+  </div>
+</form>
+
+  <div class="modifie-account-bn">
+    <button mat-raised-button color="warn" (click)="saveChanges()">Save changes</button>
+  </div>
+  <br>
+  <div class="delete-account-btn">
+    <button mat-raised-button color="warn" (click)="deleteAccount()">Delete Account</button>
+  </div>
+</mat-card>
+
+<app-footer></app-footer>

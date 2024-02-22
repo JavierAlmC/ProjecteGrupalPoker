@@ -5,6 +5,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RoomsComponent } from './components/rooms/rooms.component';
+import { ProfileComponent } from './components/profile/profile.component';
+
 
 
 @Component({
@@ -17,7 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
     MainComponent,
     FooterComponent,
     HttpClientModule,
-
+    RoomsComponent,
+    ProfileComponent,
+    
+    
 
 
   ],

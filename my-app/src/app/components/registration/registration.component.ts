@@ -32,8 +32,7 @@ import { ToastrService } from 'ngx-toastr';
     MatIconModule,
   ],
   templateUrl: './registration.component.html',
-  styleUrl: './registration.component.css',
-  encapsulation: ViewEncapsulation.None,
+  styleUrl: './registration.component.css'
 })
 export class RegistrationComponent {
   isSubmitted = false;
@@ -128,11 +127,7 @@ export class RegistrationComponent {
             easing: 'ease-out',
             timeOut: 2000,
           });
-          this.userServices.setToken(response.token);
-          console.log(this.userServices.getToken());
-          this.userServices.setNickname(response.nickname);
-          console.log(this.userServices.getNickname());
-          this.router.navigate(['rooms']);
+          this.router.navigate(['login']);
         },
         error: (error) => {
           this.toastr.error('Registration failed', 'Error', {

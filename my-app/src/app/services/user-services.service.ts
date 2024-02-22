@@ -1,16 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthData, NewUser } from '../interfaces/auth-data.model';
-import { Observable } from 'rxjs';
-import { URL_SPRING } from '../environment/environment';
+import { BehaviorSubject, Observable, catchError, map, of } from 'rxjs';
+import { URL_LOCAL_PROXY} from '../environment/environment';
 import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserServicesService {
-  constructor(private http: HttpClient) {}
 
+  constructor(private http: HttpClient) {}
+  
   loginUser(nickname: string, password: string): Observable<any> {
     const authData: AuthData = {
       nickname: nickname,
@@ -22,7 +23,7 @@ export class UserServicesService {
       // example Authorization header
       // Add more headers as needed
     });*/
-    return this.http.post(URL_SPRING + 'auth/login', authData);
+    return this.http.post('/auth/login', authData);
   }
 
   createUser(nickname: string, nombre: string, email: string, password: string): Observable<any> {
@@ -36,7 +37,7 @@ export class UserServicesService {
       password: password,
       roles : ["user"],
     };
-    return this.http.post(URL_SPRING + 'auth/nuevo', userData,{headers : headers});
+    return this.http.post('/auth/nuevo', userData,{headers : headers});
   }
   setToken(token: string) {
     //1 dia
@@ -55,6 +56,15 @@ export class UserServicesService {
     const expirationDate = new Date(Date.now() + 86400 * 1000).toUTCString();
     document.cookie = `nickname=${nickname}; Expires=${expirationDate}; SameSite=Strict;`;
   }
+  getUserId():Observable<any>{
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.getToken()}`
+    });
+    const url = `/api/v1/infoPerfil/${this.getNickname()}`;
+    return this.http.get<any>(url,{ headers: headers, responseType: 'json' });
+
+  }
   getNickname() {
     const nickname = document.cookie
       .split('; ')
@@ -72,4 +82,95 @@ export class UserServicesService {
     document.cookie =
       'nickname=; Expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Strict;';
   }
+
+
+  private profileSubject = new BehaviorSubject<any>(null);
+  profile$ = this.profileSubject.asObservable();
+
+  getProfile(){
+    const nickname = this.getNickname();
+    const token = this.getToken();
+  
+    if (nickname && token) {
+      const headers = new HttpHeaders({
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      });
+  
+      this.http.get(`/api/v1/infoPerfil/${nickname}`, { headers: headers }).subscribe(
+        (resp: any) => {
+          return this.profileSubject.next(resp);
+        },
+        (error) => {
+          return error;
+        }
+      );
+  }
+  }
+
+  deleteProfile(){
+    const nickname = this.getNickname();
+    const token = this.getToken();
+  
+    if (nickname && token) {
+      const headers = new HttpHeaders({
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      });
+  
+      this.http.get("http://localhost:8090/api/v1/eliminarUsuario/" + nickname, { headers: headers }).subscribe(
+        (resp: any) => {
+          return resp;
+        },
+        (error) => {
+          return error;
+        }
+      );
+      
+  }
+  }
+
+  editProfile(updatedProfile: any): void {
+    const nickname = this.getNickname();
+    const token = this.getToken();
+  
+    if (nickname && token) {
+      const headers = new HttpHeaders({
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      });
+  
+      this.http.post(`/api/v1/modificarUsuario/${nickname}`, updatedProfile, { headers: headers }).subscribe(
+        (resp: any) => {
+          return resp;
+        },
+        (error) => {
+          return error;
+        }
+      );
+    }
+  }
+  getOrderBySalario(): Observable<any[]> {
+    const nickname = this.getNickname();
+    const token = this.getToken();
+    if (nickname && token) {
+        const headers = new HttpHeaders({
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json',
+        });
+
+
+        return this.http.get(`/api/v1/ordenadosPorSaldo`, { headers: headers }).pipe(
+            map((resp: any) => {
+                return resp.map((user: { nickname: any; saldo: any; }) => [user.nickname, user.saldo]);
+            }),
+            catchError((error) => {
+                console.error(error);
+                return [];
+            })
+        );
+    }
+    return of([]); 
+  }
+
 }

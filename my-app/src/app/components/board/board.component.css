@@ -1,0 +1,172 @@
+.contenedor {
+    
+    padding-left: 1vw;
+    width: 99vw;
+    height: 90%;
+    margin-top: 2vw;
+    display: grid;
+    background: linear-gradient(to right, #88d498, #264d00);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    
+}
+
+
+.celda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    
+}
+
+.c1, .c3, .c7, .c9 {
+    width: 7vw;
+    height: 10vw;
+}
+.c1, .c4, .c7 {
+    margin-left: -1vw;
+}
+
+.c3, .c9 {
+    width: 7vw;
+    height: 10vw;
+    margin-left: 8vw;
+}
+
+.c2, .c8 {
+    width: 50vw;
+    height: 10vw;
+}
+
+.c4, .c6 {
+    width: 10vw;
+    height: 20vw;
+}
+
+
+.c1 {
+    
+    margin-bottom: 2vw;
+    margin-left: -1.5vw;
+}
+
+.c2 {
+    padding-left: 4vw;
+    padding-top: -2vw
+}
+
+.c3 {
+    margin-left: 5vw;
+}
+
+.c4 {
+    margin-bottom: 2vw;
+   
+}
+
+
+.c5 {
+    width: 57vw;
+    height: 20vw;
+    
+    
+
+}
+.taula {
+    width: 220%;
+    height: 170%;
+    background-image: url(/assets/img/mesa.png);
+    background-repeat: no-repeat;
+    background-size: 60vw 36vw;
+    margin-bottom: 1vw;
+    margin-left: -1vw;
+}
+
+
+.c6 {
+    margin-left: 2.3vw;
+}
+
+.c7 {
+    padding-top: 1.7vw;
+}
+
+.c8 {
+    padding-left: 4vw;
+    padding-top: 2vw;
+}
+.c9 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+}
+.button-33 {
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-bottom: 10px;
+  }
+  
+  .button-33:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+  }
+.contenedor-cartas-horizontal {
+    display: flex;
+    width: 20vw;
+    height: 10vw;
+}
+
+.porta-carta {
+    width: 20vw;
+    height: 9vw;
+    
+}
+.contenedor-cartas-vertical {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+
+}
+.porta-carta-vertical {
+    width: 10vw;
+    height: 20vw;
+    
+}
+
+
+
+.baralla {
+    width: 80%;
+    height: 9vw;
+}
+
+.carta {
+    width: 80%;
+    height: 9vw;
+}
+
+
+
+.carta-horitzontal{
+    width: 9vw;
+    height: 80%;
+}
+
